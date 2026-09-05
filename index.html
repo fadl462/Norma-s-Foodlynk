@@ -701,8 +701,7 @@ button,a,input{touch-action:manipulation}
 <section class="section order" id="order"><div class="container order-layout"><div class="order-copy reveal"><div class="eyebrow">Your order, your way</div><h2 class="serif">Build it.<br/>Send it.<br/>Enjoy it.</h2><p>Select your favourites and send the basket to Norma’s on WhatsApp. The team can confirm availability, delivery/pickup details and the final total with you.</p><div class="order-actions"><a class="btn btn-dark" href="tel:+233500691238">Call 050 069 1238</a><a class="btn btn-orange" href="https://wa.me/233500691238" rel="noopener noreferrer" target="_blank">Open WhatsApp ↗</a></div></div><div class="order-box reveal"><div class="basket-head"><div class="eyebrow">Your basket</div><span class="basket-count" id="count">0 items</span></div><div id="basket"><div class="basket-empty">Your basket is empty. Add something delicious from the menu.</div></div><div class="basket-total"><span>Total</span><span id="total">GHS 0</span></div><div class="delivery"><button class="active" data-service="Pickup" type="button">Pickup</button><button data-service="Delivery" type="button">Delivery</button></div><div class="basket-actions"><button class="btn btn-dark" id="whatsapp" type="button">Send on WhatsApp ↗</button><button class="btn" id="clear" style="background:#eee" type="button">Clear basket</button></div></div></div></section>
 </main>
 
-<button class="back-top-float" id="backTopFloat" type="button" aria-label="Back to top"><span class="arrow">↑</span><span>Back to top</span></button>
-<footer class="footer" id="footer"><div class="footer-cta"><div class="container footer-cta-inner"><div><div class="eyebrow">One more thing</div><h2 class="serif">Your next craving<br/><em>starts here.</em></h2></div><a class="footer-cta-btn" href="#menu"><span>Build my order</span><b>↗</b></a></div></div><div class="container"><div class="footer-grid"><div class="footer-brand"><img alt="Norma’s Foodlynk" class="footer-logo" src="assets/logo.webp"/><div class="footer-brand-copy"><span class="footer-kicker">NORMA’S FOODLYNK · TAMALE</span><h3 class="serif">Come hungry.<br/><em>Leave happy.</em></h3><p>Big flavours, Ghanaian favourites and feel-good plates made for the craving.</p></div></div><div class="footer-col"><div class="eyebrow" style="color:var(--lime)">Explore</div><nav class="footer-links" aria-label="Footer navigation"><a href="#top">Home <span>↗</span></a><a href="#story">Our story <span>↗</span></a><a href="#menu">Menu <span>↗</span></a><a href="#reels">Food in motion <span>↗</span></a><a href="#order">Order <span>↗</span></a></nav></div><div class="footer-col"><div class="eyebrow" style="color:var(--lime)">Order direct</div><div class="footer-contact"><a href="tel:+233500691238"><small>Call</small><strong>050 069 1238</strong></a><a href="https://wa.me/233500691238" rel="noopener noreferrer" target="_blank"><small>WhatsApp</small><strong>Start a chat ↗</strong></a></div><div class="footer-hours"><small>Kitchen hours</small><p>10:00 AM — 5:00 PM<br/>Pre-order only · Delivery &amp; pickup</p></div></div></div><div class="footer-bottom"><span>© 2026 Norma’s Foodlynk</span><span>Tamale, Ghana · Made for cravings.</span><button class="back-top back-top-primary" type="button" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})"><span>Back to top</span><b>↑</b></button></div></div></footer>
+<footer class="footer" id="footer"><div class="footer-cta"><div class="container footer-cta-inner"><div><div class="eyebrow">One more thing</div><h2 class="serif">Your next craving<br/><em>starts here.</em></h2></div><a class="footer-cta-btn" href="#menu"><span>Build my order</span><b>↗</b></a></div></div><div class="container"><div class="footer-grid"><div class="footer-brand"><img alt="Norma’s Foodlynk" class="footer-logo" src="assets/logo.webp"/><div class="footer-brand-copy"><span class="footer-kicker">NORMA’S FOODLYNK · TAMALE</span><h3 class="serif">Come hungry.<br/><em>Leave happy.</em></h3><p>Big flavours, Ghanaian favourites and feel-good plates made for the craving.</p></div></div><div class="footer-col"><div class="eyebrow" style="color:var(--lime)">Explore</div><nav class="footer-links" aria-label="Footer navigation"><a href="#top">Home <span>↗</span></a><a href="#story">Our story <span>↗</span></a><a href="#menu">Menu <span>↗</span></a><a href="#reels">Food in motion <span>↗</span></a><a href="#order">Order <span>↗</span></a></nav></div><div class="footer-col"><div class="eyebrow" style="color:var(--lime)">Order direct</div><div class="footer-contact"><a href="tel:+233500691238"><small>Call</small><strong>050 069 1238</strong></a><a href="https://wa.me/233500691238" rel="noopener noreferrer" target="_blank"><small>WhatsApp</small><strong>Start a chat ↗</strong></a></div><div class="footer-hours"><small>Kitchen hours</small><p>10:00 AM — 5:00 PM<br/>Pre-order only · Delivery &amp; pickup</p></div></div></div><div class="footer-bottom"><span>© 2026 Norma’s Foodlynk</span><span>Tamale, Ghana · Made for cravings.</span><button class="footer-back-top" id="footerBackTop" type="button" aria-label="Back to top"><span>Back to top</span><b>↑</b></button></div></div></footer>
 <aside class="mini-order-slip" id="miniOrderSlip" aria-live="polite" aria-label="Your selected food"><div class="mini-slip-top"><div><div class="mini-slip-label">Your food slip</div><div class="mini-slip-title">Cravings so far.</div></div><span class="mini-slip-count" id="miniCount">0 items</span></div><div class="mini-slip-list" id="miniList"></div><div class="mini-slip-bottom"><div class="mini-slip-total"><small>Running total</small><strong id="miniTotal">GHS 0</strong></div><button class="mini-slip-cta" id="miniCheckout" type="button">I’m done choosing →</button></div><div class="mini-slip-hint">Keep exploring the menu. When your cravings are complete, tap here to review and send your order.</div></aside><button aria-label="Open your order basket" class="floating-order" id="floatingOrder" type="button"><span class="floating-order-icon">✦</span><span class="floating-order-label">ORDER</span><span class="floating-order-count" id="floatingOrderCount">0</span></button><div class="toast" id="toast">Added to basket.</div><div class="modal" id="modal"><button class="close" onclick="closeModal()" type="button">×</button><img alt="Norma’s Foodlynk dish" id="modalImg"/></div>
 <script>
 const menu=[
@@ -803,56 +802,71 @@ window.addEventListener('resize',()=>{if(window.innerWidth>820){nav.classList.re
 })();
 </script>
 
-<script>
-(function(){
-  const btn=document.getElementById('backTopFloat');
-  const footer=document.getElementById('footer');
-  if(!btn||!footer) return;
-  const toggle=()=>{
-    const r=footer.getBoundingClientRect();
-    const nearBottom=(window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - Math.max(80, window.innerHeight*.12));
-    btn.classList.toggle('is-visible', nearBottom || (r.top < window.innerHeight && r.bottom > window.innerHeight*.55));
-  };
-  btn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
-  window.addEventListener('scroll',toggle,{passive:true});
-  window.addEventListener('resize',toggle);
-  toggle();
-})();
-</script>
 
-<style id="v43-back-to-top">
-/* V43 — always-visible footer Back to top action */
-.back-top-primary{
-  display:inline-flex!important;
-  align-items:center;
-  justify-content:center;
-  gap:10px;
+
+
+
+<style id="v45-single-back-to-top">
+/* V45 — one clean Back to Top control only. */
+.back-top,.back-top-primary,.back-top-float,#backTopFloat{display:none!important}
+.footer-bottom{
+  display:grid!important;
+  grid-template-columns:1fr auto 1fr!important;
+  align-items:center!important;
+  gap:18px!important;
+}
+.footer-bottom>span:first-child{justify-self:start}
+.footer-bottom>span:nth-child(2){justify-self:center;text-align:center}
+.footer-back-top{
+  justify-self:end;
+  margin-right:86px;
   min-height:44px;
-  padding:0 17px!important;
-  border:1px solid rgba(196,239,82,.55)!important;
-  border-radius:999px!important;
-  background:rgba(196,239,82,.12)!important;
-  color:#c4ef52!important;
-  font:800 10px/1 var(--sans,Arial,sans-serif)!important;
-  letter-spacing:.1em!important;
+  padding:0 16px;
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  border:1px solid rgba(196,239,82,.42);
+  border-radius:999px;
+  background:rgba(196,239,82,.08);
+  color:var(--lime,#c4ef52);
+  font:inherit;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.08em;
   text-transform:uppercase;
   cursor:pointer;
   white-space:nowrap;
-  transition:transform .2s ease,background .2s ease,color .2s ease,border-color .2s ease;
+  transition:transform .25s ease,background .25s ease,border-color .25s ease,color .25s ease;
 }
-.back-top-primary b{font-size:16px;line-height:1;font-weight:800}
-.back-top-primary:hover{
-  transform:translateY(-2px);
-  background:var(--lime,#c4ef52)!important;
-  color:#111!important;
-  border-color:var(--lime,#c4ef52)!important;
+.footer-back-top b{font-size:15px;line-height:1}
+.footer-back-top:hover{transform:translateY(-2px);background:var(--lime,#c4ef52);border-color:var(--lime,#c4ef52);color:#111}
+.footer-back-top:focus-visible{outline:2px solid var(--lime,#c4ef52);outline-offset:3px}
+@media(max-width:900px){
+  .footer-bottom{grid-template-columns:1fr auto!important}
+  .footer-bottom>span:nth-child(2){grid-column:1/-1;grid-row:2;justify-self:start;text-align:left}
+  .footer-back-top{grid-column:2;grid-row:1;margin-right:72px}
 }
-.back-top-primary:focus-visible{outline:2px solid var(--lime,#c4ef52);outline-offset:3px}
 @media(max-width:600px){
-  .back-top-primary{min-height:46px;padding:0 16px!important;font-size:10px!important}
+  .footer-bottom{display:grid!important;grid-template-columns:1fr auto!important;gap:8px 12px!important}
+  .footer-back-top{margin-right:68px;min-height:40px;padding:0 13px;font-size:9px}
 }
-@media(prefers-reduced-motion:reduce){.back-top-primary{transition:none}}
+@media(max-width:420px){
+  .footer-back-top{margin-right:58px}
+}
+@media(prefers-reduced-motion:reduce){.footer-back-top{transition:none}}
 </style>
+<script id="v45-back-to-top-script">
+(()=>{
+  // Defensive cleanup in case an older deployment fragment survives in cache/build output.
+  document.querySelectorAll('.back-top-float,#backTopFloat,.back-top-primary').forEach(el=>el.remove());
+  const btn=document.getElementById('footerBackTop');
+  if(!btn)return;
+  btn.addEventListener('click',()=>{
+    window.scrollTo({top:0,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
+    if(history.replaceState) history.replaceState(null,'',location.pathname+location.search+'#top');
+  });
+})();
+</script>
 </body></html>
 <style id="v29-header-alignment">
 /* V29 — precision header alignment */
@@ -1321,39 +1335,5 @@ window.addEventListener('resize',()=>{if(window.innerWidth>820){nav.classList.re
   .hero-inner{padding-top:120px!important;padding-bottom:18px!important}
 }
 
-/* V41 — footer return-to-top control */
-.back-top-float{
-  position:fixed;
-  left:24px;
-  bottom:24px;
-  z-index:90;
-  display:inline-flex;
-  align-items:center;
-  gap:9px;
-  min-height:44px;
-  padding:0 17px;
-  border:1px solid rgba(255,255,255,.18);
-  border-radius:999px;
-  background:rgba(15,15,13,.84);
-  color:#fff;
-  font:700 11px/1 var(--sans,Arial,sans-serif);
-  letter-spacing:.08em;
-  text-transform:uppercase;
-  backdrop-filter:blur(14px);
-  -webkit-backdrop-filter:blur(14px);
-  box-shadow:0 12px 30px rgba(0,0,0,.25);
-  opacity:0;
-  visibility:hidden;
-  transform:translateY(12px);
-  pointer-events:none;
-  transition:opacity .25s ease,transform .25s ease,visibility .25s ease,border-color .2s ease,background .2s ease;
-}
-.back-top-float.is-visible{opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto}
-.back-top-float:hover{background:rgba(196,239,82,.96);border-color:rgba(196,239,82,.96);color:#111;transform:translateY(-2px)}
-.back-top-float:focus-visible{outline:2px solid var(--lime,#c4ef52);outline-offset:3px}
-.back-top-float .arrow{font-size:17px;line-height:0}
-@media (max-width:700px){
-  .back-top-float{left:16px;bottom:18px;min-height:42px;padding:0 14px;font-size:10px}
-}
-@media (prefers-reduced-motion:reduce){.back-top-float{transition:none}}
+
 </style>
