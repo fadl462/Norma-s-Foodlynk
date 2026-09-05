@@ -127,3 +127,26 @@ const cursor=document.getElementById('cursor');if(matchMedia('(pointer:fine)').m
 renderMenu();renderBasket();
 </script>
 </body></html>
+<style>
+/* FINAL HERO VIDEO SCALE PASS — keep the real reel visible, smaller and naturally framed */
+.hero-bg{background:#0d0d0b}
+.hero-bg-fill{opacity:.34!important;filter:blur(24px) saturate(1.08) brightness(.46)!important;transform:scale(1.08)!important}
+.hero-bg-blur{inset:0!important;display:flex!important;align-items:center!important;justify-content:flex-end!important;padding:92px 6% 34px 48%!important;filter:none!important;transform:none!important;opacity:1!important;background:transparent!important}
+.hero-bg-blur video{width:auto!important;height:min(78vh,760px)!important;max-width:46vw!important;max-height:78vh!important;aspect-ratio:9/16!important;object-fit:contain!important;object-position:center!important;display:block!important;background:transparent!important;filter:saturate(1.08) contrast(1.03) brightness(.92)!important;border-radius:28px!important;box-shadow:0 34px 90px rgba(0,0,0,.38)!important}
+.hero-bg-shade{background:linear-gradient(90deg,rgba(5,5,4,.97) 0%,rgba(5,5,4,.86) 34%,rgba(5,5,4,.42) 58%,rgba(5,5,4,.22) 78%,rgba(5,5,4,.44) 100%),linear-gradient(180deg,rgba(5,5,4,.18),rgba(5,5,4,.70) 100%)!important}
+.hero-glow{z-index:2;opacity:.14!important}
+@media(max-width:900px){
+  .hero-bg-blur{padding:105px 4% 32px 42%!important}
+  .hero-bg-blur video{height:min(70vh,650px)!important;max-width:52vw!important;border-radius:24px!important}
+}
+@media(max-width:720px){
+  .hero-bg-fill{opacity:.28!important;filter:blur(20px) saturate(1.05) brightness(.42)!important}
+  .hero-bg-blur{justify-content:center!important;align-items:flex-end!important;padding:0 8% 5vh 34%!important}
+  .hero-bg-blur video{height:58vh!important;max-height:58vh!important;max-width:64vw!important;width:auto!important;border-radius:22px!important;opacity:.62!important;box-shadow:none!important}
+  .hero-bg-shade{background:linear-gradient(180deg,rgba(5,5,4,.34) 0%,rgba(5,5,4,.48) 40%,rgba(5,5,4,.92) 100%)!important}
+}
+@media(max-width:480px){
+  .hero-bg-blur{padding:0 4% 3vh 30%!important}
+  .hero-bg-blur video{height:52vh!important;max-height:52vh!important;max-width:70vw!important;opacity:.55!important}
+}
+</style>
