@@ -631,12 +631,62 @@ button,a,input{touch-action:manipulation}
 }
 </style>
 
+
+<style id="v28-utility-topbar">
+/* V28 — move hero utility details into a dedicated top information bar */
+.hero-utility{position:fixed;top:0;left:0;width:100%;height:35px;z-index:95;background:rgba(10,10,9,.86);border-bottom:1px solid rgba(255,255,255,.10);backdrop-filter:blur(18px) saturate(1.08);-webkit-backdrop-filter:blur(18px) saturate(1.08);color:#fff}
+.hero-utility-inner{width:min(1180px,calc(100% - 32px));height:100%;margin:auto;display:grid;grid-template-columns:1fr 1fr 1.35fr;align-items:center}
+.utility-item{height:18px;display:flex;align-items:center;justify-content:center;gap:9px;padding:0 18px;border-right:1px solid rgba(255,255,255,.10);min-width:0}
+.utility-item:first-child{justify-content:flex-start;padding-left:2px}
+.utility-item:last-child{justify-content:flex-end;padding-right:2px;border-right:0}
+.utility-item small{font-size:8px;line-height:1;text-transform:uppercase;letter-spacing:.17em;color:rgba(255,255,255,.43);font-weight:900;white-space:nowrap}
+.utility-item span,.utility-item a{font-size:10px;line-height:1;color:rgba(255,255,255,.86);font-weight:800;white-space:nowrap;text-decoration:none}
+.utility-item a:hover{color:var(--lime)}
+.nav{top:43px!important}
+.nav.scrolled{top:40px!important}
+.hero-inner{padding-top:142px!important}
+@media(max-width:1024px){
+  .hero-utility-inner{width:calc(100% - 34px)}
+  .utility-item{padding-inline:12px;gap:7px}
+  .utility-item small{font-size:7px}
+  .utility-item span,.utility-item a{font-size:9px}
+}
+@media(max-width:900px){
+  .hero-utility{height:34px}
+  .hero-utility-inner{width:calc(100% - 24px);grid-template-columns:1fr 1fr 1.3fr}
+  .utility-item{padding-inline:8px;gap:5px}
+  .utility-item:first-child{padding-left:0}
+  .utility-item:last-child{padding-right:0}
+  .utility-item small{font-size:6.5px;letter-spacing:.12em}
+  .utility-item span,.utility-item a{font-size:8px}
+  .nav{top:40px!important}
+  .nav.scrolled{top:38px!important}
+  .hero-inner{padding-top:112px!important}
+}
+@media(max-width:600px){
+  .hero-utility{height:32px}
+  .hero-utility-inner{width:calc(100% - 20px);grid-template-columns:.95fr .95fr 1.25fr}
+  .utility-item{height:16px;padding-inline:6px;gap:4px}
+  .utility-item small{font-size:6px;letter-spacing:.10em}
+  .utility-item span,.utility-item a{font-size:7.5px;letter-spacing:-.01em}
+  .nav{top:38px!important}
+  .nav.scrolled{top:36px!important}
+  .hero-inner{padding-top:108px!important}
+}
+@media(max-width:420px){
+  .hero-utility-inner{width:calc(100% - 14px)}
+  .utility-item{padding-inline:4px;gap:3px}
+  .utility-item small{font-size:5.5px}
+  .utility-item span,.utility-item a{font-size:7px}
+}
+@media(prefers-reduced-motion:reduce){.hero-utility{backdrop-filter:none;-webkit-backdrop-filter:none}}
+</style>
 </head>
 <body>
 <div class="noise"></div><div class="cursor" id="cursor"></div>
-<nav class="nav" id="nav"><a class="brand" href="#top"><img alt="Norma’s Foodlynk logo" src="assets/logo.webp"/><span>Norma’s Foodlynk</span></a><div class="navlinks"><a href="#story">Story</a><a href="#menu">Menu</a><a href="#reels">In motion</a><a href="#order">Order</a></div><div class="navcta"><a class="btn btn-lime" href="#order">Order now</a></div><button aria-expanded="false" aria-label="Open navigation" class="menu-toggle" id="menuToggle" type="button">☰</button></nav>
+<div class="hero-utility" aria-label="Norma’s Foodlynk quick information"><div class="hero-utility-inner"><div class="utility-item"><small>Order line</small><a href="tel:+233500691238">050 069 1238</a></div><div class="utility-item"><small>Kitchen hours</small><span>10:00 AM–5:00 PM</span></div><div class="utility-item"><small>Service</small><span>Pre-order · Pickup · Delivery</span></div></div></div><nav class="nav" id="nav"><a class="brand" href="#top"><img alt="Norma’s Foodlynk logo" src="assets/logo.webp"/><span>Norma’s Foodlynk</span></a><div class="navlinks"><a href="#story">Story</a><a href="#menu">Menu</a><a href="#reels">In motion</a><a href="#order">Order</a></div><div class="navcta"><a class="btn btn-lime" href="#order">Order now</a></div><button aria-expanded="false" aria-label="Open navigation" class="menu-toggle" id="menuToggle" type="button">☰</button></nav>
 <main id="top">
-<section class="hero"><div class="hero-bg"><video aria-hidden="true" autoplay="" class="hero-background-video" loop="" muted="" playsinline="" poster="assets/video/posters/reel-05.jpg"><source src="assets/video/hero-background.mp4" type="video/mp4"/></video><div class="hero-bg-shade"></div></div><div class="hero-glow"></div><div class="hero-inner"><div class="hero-content"><div class="hero-topline"><span class="dot"></span><span id="status">Kitchen hours · 10:00 AM–5:00 PM</span></div><div class="hero-kicker">TAMALE · GHANA</div><h1 class="serif reveal">Big food.<br/><em>Bold</em> cravings.</h1><p class="hero-sub reveal">Ghanaian favourites, loaded plates and feel-good comfort food made for the craving. Pre-order for pickup or delivery.</p><div class="hero-actions reveal"><a class="btn btn-lime" href="#menu">Explore the menu ↓</a><a class="btn btn-ghost" href="https://wa.me/233500691238?text=Hi%20Norma%E2%80%99s%20Foodlynk!%20I%E2%80%99d%20like%20to%20place%20an%20order." rel="noopener noreferrer" target="_blank">WhatsApp us ↗</a></div><div class="hero-bottom reveal"><div class="hero-meta"><div><small>Order line</small><a aria-label="Call Norma’s Foodlynk at 050 069 1238" href="tel:+233500691238"><strong>050 069 1238</strong></a></div><div><small>Hours</small><strong>10:00 AM–5:00 PM</strong></div><div><small>Service</small><strong>Pre-order · Pickup · Delivery</strong></div></div><a aria-label="Scroll to the menu" class="scroll" href="#menu">Scroll to taste ↓</a></div></div><div class="hero-video-card reveal"><div class="video-frame"><video autoplay="" loop="" muted="" playsinline="" poster="assets/video/posters/reel-03.jpg"><source src="assets/video/food-reel-03.mp4" type="video/mp4"/></video><div class="video-frame-overlay"></div><div class="video-label"><span>FOOD IN MOTION</span><strong>Watch the craving.</strong></div></div><div class="hero-video-note">Real food · real plates · Tamale</div></div></div><a class="hero-badge" href="#menu" aria-label="Pre-order your craving and explore the menu"><span class="hero-badge-icon">✦</span><span class="hero-badge-copy">PRE-ORDER<br/>YOUR<br/>CRAVING</span><span class="hero-badge-arrow">↗</span></a></section>
+<section class="hero"><div class="hero-bg"><video aria-hidden="true" autoplay="" class="hero-background-video" loop="" muted="" playsinline="" poster="assets/video/posters/reel-05.jpg"><source src="assets/video/hero-background.mp4" type="video/mp4"/></video><div class="hero-bg-shade"></div></div><div class="hero-glow"></div><div class="hero-inner"><div class="hero-content"><div class="hero-topline"><span class="dot"></span><span id="status">Kitchen hours · 10:00 AM–5:00 PM</span></div><div class="hero-kicker">TAMALE · GHANA</div><h1 class="serif reveal">Big food.<br/><em>Bold</em> cravings.</h1><p class="hero-sub reveal">Ghanaian favourites, loaded plates and feel-good comfort food made for the craving. Pre-order for pickup or delivery.</p><div class="hero-actions reveal"><a class="btn btn-lime" href="#menu">Explore the menu ↓</a><a class="btn btn-ghost" href="https://wa.me/233500691238?text=Hi%20Norma%E2%80%99s%20Foodlynk!%20I%E2%80%99d%20like%20to%20place%20an%20order." rel="noopener noreferrer" target="_blank">WhatsApp us ↗</a></div><div class="hero-bottom reveal"><a aria-label="Scroll to the menu" class="scroll" href="#menu">Scroll to taste ↓</a></div></div><div class="hero-video-card reveal"><div class="video-frame"><video autoplay="" loop="" muted="" playsinline="" poster="assets/video/posters/reel-03.jpg"><source src="assets/video/food-reel-03.mp4" type="video/mp4"/></video><div class="video-frame-overlay"></div><div class="video-label"><span>FOOD IN MOTION</span><strong>Watch the craving.</strong></div></div><div class="hero-video-note">Real food · real plates · Tamale</div></div></div><a class="hero-badge" href="#menu" aria-label="Pre-order your craving and explore the menu"><span class="hero-badge-icon">✦</span><span class="hero-badge-copy">PRE-ORDER<br/>YOUR<br/>CRAVING</span><span class="hero-badge-arrow">↗</span></a></section>
 <div class="ticker"><div class="ticker-track"><span class="ticker-item">Freshly made <i></i> Tamale <i></i> Big portions <i></i> Pre-order only <i></i> Delivery &amp; pickup <i></i></span><span class="ticker-item">Freshly made <i></i> Tamale <i></i> Big portions <i></i> Pre-order only <i></i> Delivery &amp; pickup <i></i></span></div></div>
 <section class="section intro" id="story"><div class="container intro-grid"><div class="reveal"><div class="eyebrow">The Foodlynk feeling</div><h2 class="serif">Come for the <em>craving.</em><br/>Stay for the plate.</h2><p class="lead">Norma’s Foodlynk brings together generous Ghanaian favourites and crowd-pleasers for lunch, dinner cravings, quick bites and “let’s add one more” moments.</p><p class="lead" style="margin-top:15px">From tilapia and banku to loaded fries, jollof, shawarma, chicken, guinea fowl and fresh drinks — the menu is built for flavour and convenience.</p><a class="btn btn-dark" href="#menu" style="margin-top:23px">See what’s cooking →</a></div><div class="photo-stack reveal"><div class="photo-main"><img alt="Colourful meal from Norma’s Foodlynk" loading="lazy" src="assets/img/food-12.webp"/></div><div class="photo-small"><img alt="Loaded meal from Norma’s Foodlynk" loading="lazy" src="assets/img/food-06.webp"/></div><div class="ingredient-orb">made for<br/>the craving</div></div></div></section>
 <section class="section experience"><div class="container"><div class="experience-head reveal"><div><div class="eyebrow" style="color:var(--lime)">A little taste of Norma’s</div><h2 class="serif">Built to make<br/>you <em>hungry.</em></h2></div><p class="experience-note">Real dishes. Real photos. No stock-food fantasy. Browse the plates, find your mood, then build your order.</p></div></div><div class="dish-track" id="dishTrack"></div></section>
