@@ -23,3 +23,6 @@ FEATURES
 
 NOTE
 The source menu image contained repeated item names with different prices. Those entries are preserved as separate options instead of inventing sizes/variants.
+
+
+Restored hero: full-bleed cinematic food video background. Generated menu photography is used for dishes without supplied photographs.
