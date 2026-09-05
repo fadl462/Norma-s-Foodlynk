@@ -801,3 +801,61 @@ window.addEventListener('resize',()=>{if(window.innerWidth>820){nav.classList.re
 })();
 </script>
 </body></html>
+<style id="v29-header-alignment">
+/* V29 — precision header alignment */
+.nav{
+  grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)!important;
+  align-items:center!important;
+}
+.nav > .brand,
+.nav > .navlinks,
+.nav > .navcta{
+  height:100%;
+  align-self:stretch;
+  display:flex;
+  align-items:center;
+}
+.nav > .brand{justify-self:start!important;}
+.nav > .navlinks{
+  justify-self:center!important;
+  align-self:stretch!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+}
+.navlinks a{
+  height:100%!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  line-height:1!important;
+  padding:0!important;
+  margin:0!important;
+}
+.nav > .navcta{
+  justify-self:end!important;
+  justify-content:flex-end!important;
+}
+.nav > .brand span,
+.nav > .navcta .btn{
+  line-height:1!important;
+}
+.hero-utility-inner{
+  align-items:center!important;
+}
+.utility-item{
+  line-height:1!important;
+  align-items:center!important;
+}
+.utility-item small,
+.utility-item span,
+.utility-item a{
+  line-height:1!important;
+}
+@media(max-width:900px){
+  .nav > .brand,
+  .nav > .navcta,
+  .nav > .menu-toggle{align-self:center!important;}
+  .nav > .brand{height:auto!important;}
+}
+</style>
