@@ -322,6 +322,284 @@
 @media(prefers-reduced-motion:reduce){.hero-badge:after{animation:none}.floating-order.pulse{animation:none}}
 </style>
 
+
+<style id="v25-responsive-system">
+/* V25 — phone + tablet responsive system
+   Intent: preserve the desktop art direction while making every section comfortable to use with touch.
+*/
+html{scroll-padding-top:86px;-webkit-text-size-adjust:100%}
+body{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img,video{max-width:100%}
+button,a,input{touch-action:manipulation}
+
+/* Tablet: 901px → 601px */
+@media (min-width:601px) and (max-width:1024px){
+  .container{width:min(100% - 44px,960px)}
+  .section{padding:100px 0}
+  .nav{width:calc(100% - 32px);top:10px}
+  .navlinks{gap:18px;font-size:12px}
+  .navcta .btn{padding:9px 13px;font-size:11px}
+  .hero-inner{width:min(100% - 44px,960px);padding:126px 0 42px!important;align-items:flex-end!important}
+  .hero-content{max-width:760px!important}
+  .hero h1{font-size:clamp(64px,10.2vw,104px);line-height:.82;max-width:760px;margin-bottom:22px}
+  .hero-sub{font-size:16px;max-width:560px;line-height:1.58}
+  .hero-actions{margin-top:22px}
+  .hero-bottom{margin-top:22px}
+  .hero-meta{gap:24px;padding-right:160px}
+  .hero-meta strong{font-size:12px}
+  .hero-badge{width:100px;height:100px;right:5%;top:25%;font-size:8px}
+  .hero-badge:before{font-size:18px}
+  .hero-background-video{object-position:66% center!important}
+
+  .intro-grid{grid-template-columns:.92fr 1.08fr;gap:48px}
+  .intro h2,.experience h2,.menu-section h2,.reels h2,.order h2{font-size:clamp(52px,7vw,76px)}
+  .lead{font-size:16px;line-height:1.65}
+  .photo-stack{height:500px}
+  .photo-small{width:175px;height:215px;left:-24px;bottom:-24px}
+
+  .experience-head{margin-bottom:42px}
+  .experience-note{max-width:300px;font-size:13px}
+  .dish-card{width:285px;height:410px}
+
+  .menu-top{gap:28px;margin-bottom:28px}
+  .menu-sub{max-width:390px;font-size:14px}
+  .menu-tools{gap:7px;margin-bottom:17px}
+  .search{width:215px;padding:9px 13px}
+  .chip{padding:6px 10px;font-size:11px}
+  .menu-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .menu-card{min-height:300px;border-radius:21px}
+  .menu-image{height:165px}
+  .menu-info{padding:15px 15px 13px}
+  .menu-info h3{font-size:15px}
+  .add{padding:8px 11px;font-size:10px}
+
+  .reels{padding-top:100px;padding-bottom:100px}
+  .reel-showcase-v16{grid-template-columns:1fr 1fr;grid-template-rows:500px 260px 260px;gap:12px;margin-top:38px}
+  .reel-feature{grid-column:1/-1;grid-row:1}
+  .reel-feature-media video{width:min(43%,300px);height:90%}
+  .reel-feature-copy{left:22px;right:22px;bottom:22px}
+  .reel-feature-copy h3{font-size:clamp(31px,4vw,43px)}
+  .reel-tile{border-radius:24px!important}
+  .reel-tile-copy{left:16px;right:16px;bottom:15px}
+  .reel-tile-copy strong{font-size:12px}
+
+  .order-layout{grid-template-columns:.9fr 1.1fr;gap:35px}
+  .order-copy p{font-size:16px;line-height:1.6}
+  .order-box{padding:22px;border-radius:26px}
+  .basket-row{gap:8px}
+  .qty{gap:5px}
+  .qty button{width:26px;height:26px}
+
+  .footer-cta-inner{padding:44px 0}
+  .footer-cta h2{font-size:clamp(52px,6.5vw,72px)}
+  .footer-grid{gap:42px;padding:60px 0 48px}
+  .footer-brand{grid-template-columns:76px minmax(0,1fr);gap:18px}
+  .footer-logo{width:76px;height:76px}
+  .footer h3{font-size:clamp(42px,5vw,56px)}
+}
+
+/* Large phones / small tablets: 601px → 720px */
+@media (min-width:601px) and (max-width:720px){
+  .hero-inner{padding-top:112px!important}
+  .hero h1{font-size:clamp(58px,12vw,82px)}
+  .hero-meta{padding-right:0}
+  .hero .scroll{position:static!important;margin-top:16px!important;width:max-content!important}
+  .menu-top{display:block}
+  .menu-sub{margin-top:18px}
+  .menu-tools{display:grid;grid-template-columns:190px minmax(0,1fr);align-items:start}
+  .search{width:100%;margin:0}
+  .menu-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .order-layout{grid-template-columns:1fr;gap:40px}
+}
+
+/* Phones: <=600px */
+@media (max-width:600px){
+  .container{width:calc(100% - 28px);max-width:none}
+  .section{padding:72px 0}
+  .eyebrow{font-size:9px;letter-spacing:.18em}
+
+  /* Header */
+  .nav{top:8px!important;left:50%;width:calc(100% - 14px)!important;height:56px!important;padding:5px 7px 5px 9px!important;border-radius:999px}
+  .brand{gap:8px;min-width:0}
+  .brand img{width:42px!important;height:42px!important;flex:0 0 auto}
+  .brand span{font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:145px}
+  .menu-toggle{width:40px;height:40px;font-size:18px}
+  .nav.open .navlinks{top:61px!important;left:0;right:0;border-radius:20px;padding:7px}
+  .nav.open .navlinks a{padding:13px 14px;font-size:13px}
+
+  /* Hero */
+  .hero{min-height:100svh}
+  .hero-inner{width:calc(100% - 28px);min-height:100svh!important;padding:112px 0 28px!important;display:flex!important;justify-content:flex-end!important;align-items:stretch!important}
+  .hero-content{width:100%;max-width:none!important;margin-top:auto}
+  .hero-topline{gap:9px;margin-bottom:16px;font-size:9px;letter-spacing:.13em}
+  .dot{width:7px;height:7px;box-shadow:0 0 0 6px rgba(196,239,82,.11)}
+  .hero-kicker{font-size:8px;letter-spacing:.22em;margin-bottom:12px}
+  .hero h1{font-size:clamp(52px,16.8vw,76px)!important;line-height:.83!important;letter-spacing:-.07em!important;max-width:100%;margin-bottom:18px}
+  .hero-sub{font-size:14px;line-height:1.55;max-width:94%}
+  .hero-actions{gap:8px;margin-top:19px}
+  .hero-actions .btn{min-height:45px;padding:11px 13px;font-size:11px;flex:1;white-space:nowrap}
+  .hero-bottom{margin-top:20px}
+  .hero-meta{gap:16px;padding-right:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%}
+  .hero-meta>div{min-width:0}
+  .hero-meta>div:nth-child(3){grid-column:1/-1}
+  .hero-meta small{font-size:8px;letter-spacing:.13em}
+  .hero-meta strong{font-size:11px;margin-top:4px;white-space:nowrap}
+  .hero-meta>div:nth-child(3) strong{white-space:normal}
+  .hero .scroll{display:flex!important;position:static!important;margin-top:16px!important;width:max-content!important;min-height:35px!important;padding:9px 12px!important;font-size:8px!important;gap:7px!important}
+  .hero-badge{width:76px!important;height:76px!important;right:3.5%!important;top:24%!important;font-size:6.5px!important;line-height:1.18!important}
+  .hero-badge:before{font-size:14px!important;margin-bottom:2px!important}
+  .hero-badge-arrow{font-size:10px}
+  .hero-background-video{object-position:72% center!important;filter:saturate(1.02) contrast(1.01) brightness(.55)!important}
+  .hero-bg-shade{background:linear-gradient(180deg,rgba(5,5,4,.30) 0%,rgba(5,5,4,.43) 36%,rgba(5,5,4,.95) 100%)!important}
+
+  /* Story */
+  .intro-grid{grid-template-columns:1fr;gap:40px}
+  .intro h2,.experience h2,.menu-section h2,.reels h2,.order h2{font-size:clamp(48px,14.7vw,62px);line-height:.9}
+  .lead{font-size:15px;line-height:1.65}
+  .photo-stack{height:min(112vw,430px);margin:6px 8px 0 0}
+  .photo-main{border-radius:25px}
+  .photo-small{width:132px;height:160px;left:-8px;bottom:-18px;border-width:7px;border-radius:21px}
+  .ingredient-orb{display:none}
+  .intro .btn{margin-top:20px!important;min-height:44px;font-size:11px}
+
+  /* Experience */
+  .experience-head{display:block;margin-bottom:34px}
+  .experience-note{margin-top:16px;max-width:100%;font-size:13px}
+  .dish-track{gap:12px}
+  .dish-card{width:250px;height:350px;border-radius:24px}
+  .dish-copy{left:18px;right:18px;bottom:17px}
+  .dish-copy h3{font-size:23px}
+  .dish-price{font-size:12px}
+
+  /* Menu */
+  .menu-top{display:block;margin-bottom:24px}
+  .menu-sub{max-width:100%;margin-top:17px;font-size:13px;line-height:1.6}
+  .menu-tools{display:flex;flex-direction:column;gap:9px;margin-bottom:15px}
+  .search{width:100%!important;height:43px;margin:0!important;padding:10px 13px;font-size:12px}
+  .chips{width:100%;gap:6px;padding:0 0 5px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .chips::-webkit-scrollbar{display:none}
+  .chip{padding:7px 10px;font-size:10px;min-height:32px}
+  .menu-grid{grid-template-columns:1fr;gap:11px}
+  .category-label{font-size:9px;margin:21px 0 0}
+  .menu-card{min-height:0;border-radius:20px}
+  .menu-image{height:205px}
+  .menu-tag{top:10px;left:10px;font-size:8px;padding:6px 8px}
+  .menu-info{padding:14px 14px 13px}
+  .menu-info h3{font-size:15px;margin-bottom:4px}
+  .menu-info p{font-size:10px}
+  .menu-bottom{padding-top:12px}
+  .price{font-size:16px}
+  .add{min-height:36px;padding:8px 12px;font-size:10px}
+  .menu-note{font-size:10px;line-height:1.5;margin-top:17px}
+
+  /* Food in motion */
+  .reels{padding-top:72px;padding-bottom:72px}
+  .reels-head{display:block}
+  .reel-showcase-v16{display:flex;flex-direction:column;gap:10px;margin-top:28px}
+  .reel-feature{height:min(132vw,540px);min-height:0!important;border-radius:22px!important}
+  .reel-feature-media video{width:min(70%,270px);height:88%}
+  .reel-feature-copy{left:17px;right:17px;bottom:17px}
+  .reel-feature-copy h3{font-size:29px;line-height:.96;margin:6px 0 9px}
+  .reel-feature-copy p{font-size:11px;line-height:1.5;max-width:88%}
+  .reel-index{font-size:9px}
+  .reel-tile{height:310px;min-height:310px!important;border-radius:21px!important}
+  .reel-tile-copy{left:15px;right:15px;bottom:13px}
+  .reel-tile-copy strong{font-size:11px}
+  .reel-tile-copy small{font-size:8px}
+  .reel-tile-media video{object-fit:contain}
+
+  /* Order */
+  .order-layout{grid-template-columns:1fr;gap:32px}
+  .order-copy p{font-size:14px;line-height:1.62}
+  .order-actions{gap:8px;margin-top:20px}
+  .order-actions .btn{flex:1;min-height:44px;font-size:10px;padding:11px 12px}
+  .order-box{padding:18px;border-radius:23px}
+  .basket-head{margin-bottom:4px}
+  .basket-count{padding:5px 8px;font-size:9px}
+  .basket-empty{padding:26px 0;font-size:12px}
+  .basket-row{display:grid;grid-template-columns:minmax(0,1fr);gap:10px;padding:13px 0}
+  .basket-name{font-size:12px}
+  .basket-meta{font-size:10px}
+  .qty{justify-content:flex-end;flex-wrap:wrap}
+  .qty button{width:30px;height:30px}
+  .basket-total{font-size:18px;padding-top:15px}
+  .delivery{gap:6px}
+  .delivery button{min-height:40px;padding:9px;font-size:10px}
+  .basket-actions{grid-template-columns:1fr;gap:7px;margin-top:14px}
+  .basket-actions .btn{min-height:42px}
+
+  /* Footer */
+  .footer-cta-inner{display:block;padding:52px 0 48px}
+  .footer-cta h2{font-size:clamp(48px,14vw,62px);line-height:.88}
+  .footer-cta-btn{margin-top:25px;width:100%;min-height:52px}
+  .footer-cta:after{font-size:50px;bottom:-20px}
+  .footer-grid{grid-template-columns:1fr;gap:36px;padding:48px 0 38px}
+  .footer-brand{grid-template-columns:58px minmax(0,1fr);gap:14px}
+  .footer-logo{width:58px;height:58px}
+  .footer-kicker{font-size:8px;margin-bottom:10px}
+  .footer h3{font-size:37px;line-height:.9;margin-bottom:13px}
+  .footer p,.footer a{font-size:12px;line-height:1.6}
+  .footer-contact{gap:11px}
+  .footer-contact strong{font-size:15px}
+  .footer-hours{margin-top:20px}
+  .footer-hours p{font-size:11px}
+  .footer-bottom{display:flex;flex-direction:column;align-items:flex-start;gap:7px;padding-top:16px;font-size:10px}
+  .back-top{align-self:flex-end;margin-top:-24px}
+
+  /* Floating order controls */
+  .floating-order{width:56px!important;height:56px!important;right:13px!important;bottom:calc(13px + env(safe-area-inset-bottom))!important;font-size:20px}
+  .floating-order-label{font-size:8px}
+  .mini-order-slip{right:10px!important;bottom:calc(10px + env(safe-area-inset-bottom))!important;width:calc(100vw - 20px)!important;max-width:none!important;border-radius:19px!important;padding:14px!important}
+  .mini-slip-title{font-size:19px}
+  .mini-slip-list{max-height:135px}
+  .mini-slip-row{grid-template-columns:minmax(0,1fr) auto auto;gap:7px;padding:8px 0}
+  .mini-slip-remove{grid-column:3}
+  .mini-slip-bottom{align-items:stretch;flex-direction:column;gap:9px}
+  .mini-slip-cta{width:100%;min-height:42px}
+  .mini-slip-hint{max-width:none;font-size:8px}
+  .toast{bottom:calc(78px + env(safe-area-inset-bottom));width:max-content;max-width:calc(100vw - 36px);text-align:center;font-size:11px}
+
+  /* Modal / tap targets */
+  .modal{padding:14px}
+  .modal img{max-width:94vw;max-height:82vh;border-radius:19px}
+  .close{right:12px;top:10px;width:40px;height:40px;font-size:22px}
+}
+
+/* Very small phones */
+@media(max-width:380px){
+  .container{width:calc(100% - 22px)}
+  .brand span{max-width:125px;font-size:10px}
+  .hero-inner{width:calc(100% - 22px);padding-bottom:23px!important}
+  .hero h1{font-size:clamp(48px,16.5vw,65px)!important}
+  .hero-sub{font-size:13px}
+  .hero-actions .btn{font-size:10px;padding-inline:10px}
+  .hero-meta{gap:12px}
+  .hero-meta strong{font-size:10px}
+  .hero-badge{width:68px!important;height:68px!important;top:23%!important}
+  .section{padding:64px 0}
+  .intro h2,.experience h2,.menu-section h2,.reels h2,.order h2{font-size:46px}
+  .menu-image{height:190px}
+  .reel-feature{height:500px}
+  .reel-tile{height:285px;min-height:285px!important}
+  .floating-order{width:52px!important;height:52px!important}
+}
+
+/* Landscape phones: keep the hero usable instead of vertically crushing the content. */
+@media(max-width:900px) and (orientation:landscape){
+  .hero{min-height:620px}
+  .hero-inner{min-height:620px!important;padding-top:105px!important;padding-bottom:28px!important}
+  .hero h1{font-size:clamp(48px,9vw,76px)!important}
+  .hero-badge{top:24%!important}
+  .hero-background-video{object-position:68% center!important}
+}
+
+/* Touch devices: remove hover lift that can make cards feel jumpy. */
+@media(hover:none){
+  .btn:hover,.menu-card:hover,.hero .scroll:hover,.floating-order:hover,.footer-cta-btn:hover{transform:none}
+  .menu-card:hover .menu-image img,.reel-tile:hover .reel-tile-media video,.reel-feature:hover .reel-feature-media video{transform:none}
+}
+</style>
+
 </head>
 <body>
 <div class="noise"></div><div class="cursor" id="cursor"></div>
