@@ -702,7 +702,7 @@ button,a,input{touch-action:manipulation}
 </main>
 
 <button class="back-top-float" id="backTopFloat" type="button" aria-label="Back to top"><span class="arrow">↑</span><span>Back to top</span></button>
-<footer class="footer" id="footer"><div class="footer-cta"><div class="container footer-cta-inner"><div><div class="eyebrow">One more thing</div><h2 class="serif">Your next craving<br/><em>starts here.</em></h2></div><a class="footer-cta-btn" href="#menu"><span>Build my order</span><b>↗</b></a></div></div><div class="container"><div class="footer-grid"><div class="footer-brand"><img alt="Norma’s Foodlynk" class="footer-logo" src="assets/logo.webp"/><div class="footer-brand-copy"><span class="footer-kicker">NORMA’S FOODLYNK · TAMALE</span><h3 class="serif">Come hungry.<br/><em>Leave happy.</em></h3><p>Big flavours, Ghanaian favourites and feel-good plates made for the craving.</p></div></div><div class="footer-col"><div class="eyebrow" style="color:var(--lime)">Explore</div><nav class="footer-links" aria-label="Footer navigation"><a href="#top">Home <span>↗</span></a><a href="#story">Our story <span>↗</span></a><a href="#menu">Menu <span>↗</span></a><a href="#reels">Food in motion <span>↗</span></a><a href="#order">Order <span>↗</span></a></nav></div><div class="footer-col"><div class="eyebrow" style="color:var(--lime)">Order direct</div><div class="footer-contact"><a href="tel:+233500691238"><small>Call</small><strong>050 069 1238</strong></a><a href="https://wa.me/233500691238" rel="noopener noreferrer" target="_blank"><small>WhatsApp</small><strong>Start a chat ↗</strong></a></div><div class="footer-hours"><small>Kitchen hours</small><p>10:00 AM — 5:00 PM<br/>Pre-order only · Delivery &amp; pickup</p></div></div></div><div class="footer-bottom"><span>© 2026 Norma’s Foodlynk</span><span>Tamale, Ghana · Made for cravings.</span><button class="back-top" type="button" onclick="document.getElementById('top').scrollIntoView({behavior:'smooth'})">Back to top ↑</button></div></div></footer>
+<footer class="footer" id="footer"><div class="footer-cta"><div class="container footer-cta-inner"><div><div class="eyebrow">One more thing</div><h2 class="serif">Your next craving<br/><em>starts here.</em></h2></div><a class="footer-cta-btn" href="#menu"><span>Build my order</span><b>↗</b></a></div></div><div class="container"><div class="footer-grid"><div class="footer-brand"><img alt="Norma’s Foodlynk" class="footer-logo" src="assets/logo.webp"/><div class="footer-brand-copy"><span class="footer-kicker">NORMA’S FOODLYNK · TAMALE</span><h3 class="serif">Come hungry.<br/><em>Leave happy.</em></h3><p>Big flavours, Ghanaian favourites and feel-good plates made for the craving.</p></div></div><div class="footer-col"><div class="eyebrow" style="color:var(--lime)">Explore</div><nav class="footer-links" aria-label="Footer navigation"><a href="#top">Home <span>↗</span></a><a href="#story">Our story <span>↗</span></a><a href="#menu">Menu <span>↗</span></a><a href="#reels">Food in motion <span>↗</span></a><a href="#order">Order <span>↗</span></a></nav></div><div class="footer-col"><div class="eyebrow" style="color:var(--lime)">Order direct</div><div class="footer-contact"><a href="tel:+233500691238"><small>Call</small><strong>050 069 1238</strong></a><a href="https://wa.me/233500691238" rel="noopener noreferrer" target="_blank"><small>WhatsApp</small><strong>Start a chat ↗</strong></a></div><div class="footer-hours"><small>Kitchen hours</small><p>10:00 AM — 5:00 PM<br/>Pre-order only · Delivery &amp; pickup</p></div></div></div><div class="footer-bottom"><span>© 2026 Norma’s Foodlynk</span><span>Tamale, Ghana · Made for cravings.</span><button class="back-top back-top-primary" type="button" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})"><span>Back to top</span><b>↑</b></button></div></div></footer>
 <aside class="mini-order-slip" id="miniOrderSlip" aria-live="polite" aria-label="Your selected food"><div class="mini-slip-top"><div><div class="mini-slip-label">Your food slip</div><div class="mini-slip-title">Cravings so far.</div></div><span class="mini-slip-count" id="miniCount">0 items</span></div><div class="mini-slip-list" id="miniList"></div><div class="mini-slip-bottom"><div class="mini-slip-total"><small>Running total</small><strong id="miniTotal">GHS 0</strong></div><button class="mini-slip-cta" id="miniCheckout" type="button">I’m done choosing →</button></div><div class="mini-slip-hint">Keep exploring the menu. When your cravings are complete, tap here to review and send your order.</div></aside><button aria-label="Open your order basket" class="floating-order" id="floatingOrder" type="button"><span class="floating-order-icon">✦</span><span class="floating-order-label">ORDER</span><span class="floating-order-count" id="floatingOrderCount">0</span></button><div class="toast" id="toast">Added to basket.</div><div class="modal" id="modal"><button class="close" onclick="closeModal()" type="button">×</button><img alt="Norma’s Foodlynk dish" id="modalImg"/></div>
 <script>
 const menu=[
@@ -819,6 +819,40 @@ window.addEventListener('resize',()=>{if(window.innerWidth>820){nav.classList.re
   toggle();
 })();
 </script>
+
+<style id="v43-back-to-top">
+/* V43 — always-visible footer Back to top action */
+.back-top-primary{
+  display:inline-flex!important;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  min-height:44px;
+  padding:0 17px!important;
+  border:1px solid rgba(196,239,82,.55)!important;
+  border-radius:999px!important;
+  background:rgba(196,239,82,.12)!important;
+  color:#c4ef52!important;
+  font:800 10px/1 var(--sans,Arial,sans-serif)!important;
+  letter-spacing:.1em!important;
+  text-transform:uppercase;
+  cursor:pointer;
+  white-space:nowrap;
+  transition:transform .2s ease,background .2s ease,color .2s ease,border-color .2s ease;
+}
+.back-top-primary b{font-size:16px;line-height:1;font-weight:800}
+.back-top-primary:hover{
+  transform:translateY(-2px);
+  background:var(--lime,#c4ef52)!important;
+  color:#111!important;
+  border-color:var(--lime,#c4ef52)!important;
+}
+.back-top-primary:focus-visible{outline:2px solid var(--lime,#c4ef52);outline-offset:3px}
+@media(max-width:600px){
+  .back-top-primary{min-height:46px;padding:0 16px!important;font-size:10px!important}
+}
+@media(prefers-reduced-motion:reduce){.back-top-primary{transition:none}}
+</style>
 </body></html>
 <style id="v29-header-alignment">
 /* V29 — precision header alignment */
