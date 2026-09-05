@@ -26,3 +26,6 @@ The source menu image contained repeated item names with different prices. Those
 
 
 Restored hero: full-bleed cinematic food video background. Generated menu photography is used for dishes without supplied photographs.
+
+
+V8 hero update: hero reel is recessed on the far right as a soft background layer; reel-05 is used for a wider food composition. Original supplied food photos remain unchanged.

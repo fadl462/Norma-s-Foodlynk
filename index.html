@@ -113,12 +113,80 @@
  .hero-bg-blur video{height:58vh!important;max-height:58vh!important;max-width:58vw!important;transform:translateX(1vw) scale(.80)!important;opacity:.40!important}
 }
 </style>
+
+<style id="hero-video-final-fix">
+/* FINAL HERO VIDEO COMPOSITION
+   The reel is a recessed visual layer on the far right — not a foreground card.
+   It is intentionally smaller, farther back, and softly feathered into the hero. */
+.hero{isolation:isolate}
+.hero-bg{position:absolute!important;inset:0!important;z-index:0!important;overflow:hidden!important;background:#0b0b09!important}
+.hero-bg-fill{display:none!important}
+.hero-bg-blur{
+  position:absolute!important;
+  inset:0!important;
+  display:block!important;
+  padding:0!important;
+  overflow:hidden!important;
+  z-index:0!important;
+  opacity:1!important;
+  filter:none!important;
+  transform:none!important;
+  background:transparent!important;
+}
+.hero-bg-blur video{
+  position:absolute!important;
+  top:118px!important;
+  right:-18px!important;
+  width:390px!important;
+  height:calc(100vh - 108px)!important;
+  max-width:none!important;
+  max-height:none!important;
+  aspect-ratio:9/16!important;
+  object-fit:contain!important;
+  object-position:center center!important;
+  display:block!important;
+  background:transparent!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  filter:saturate(1.08) contrast(1.02) brightness(.78)!important;
+  opacity:.82!important;
+  transform:none!important;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.25) 12%,#000 31%,#000 87%,transparent 100%),linear-gradient(180deg,transparent 0%,#000 10%,#000 90%,transparent 100%)!important;
+  mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.25) 12%,#000 31%,#000 87%,transparent 100%),linear-gradient(180deg,transparent 0%,#000 10%,#000 90%,transparent 100%)!important;
+  -webkit-mask-composite:source-in!important;
+  mask-composite:intersect!important;
+}
+.hero-bg-shade{
+  position:absolute!important;inset:0!important;z-index:1!important;pointer-events:none!important;
+  background:
+    radial-gradient(circle at 83% 48%,rgba(196,239,82,.07),transparent 22%),
+    linear-gradient(90deg,rgba(5,5,4,.99) 0%,rgba(5,5,4,.94) 30%,rgba(5,5,4,.72) 49%,rgba(5,5,4,.34) 70%,rgba(5,5,4,.18) 100%),
+    linear-gradient(180deg,rgba(5,5,4,.12) 0%,rgba(5,5,4,.10) 55%,rgba(5,5,4,.64) 100%)!important;
+}
+.hero-inner{position:relative!important;z-index:3!important}
+.hero-badge{z-index:4!important;right:6.5%!important;top:30%!important}
+.hero-glow{z-index:2!important;opacity:.10!important}
+@media (max-width:1100px){
+  .hero-bg-blur video{right:-48px!important;width:350px!important;height:calc(100vh - 120px)!important;opacity:.76!important}
+  .hero-bg-shade{background:linear-gradient(90deg,rgba(5,5,4,.99) 0%,rgba(5,5,4,.95) 35%,rgba(5,5,4,.66) 58%,rgba(5,5,4,.22) 100%),linear-gradient(180deg,rgba(5,5,4,.12),rgba(5,5,4,.68) 100%)!important}
+}
+@media (max-width:720px){
+  .hero-bg-blur video{top:150px!important;right:-58px!important;width:270px!important;height:calc(100vh - 110px)!important;opacity:.50!important}
+  .hero-bg-shade{background:linear-gradient(180deg,rgba(5,5,4,.40) 0%,rgba(5,5,4,.52) 42%,rgba(5,5,4,.94) 100%)!important}
+  .hero-badge{right:5%!important;top:39%!important}
+}
+@media (max-width:480px){
+  .hero-bg-blur video{right:-72px!important;width:245px!important;opacity:.42!important}
+}
+@media (prefers-reduced-motion:reduce){.hero-bg-blur video{opacity:.25!important}}
+</style>
 </head>
 <body>
 <div class="noise"></div><div class="cursor" id="cursor"></div>
 <nav class="nav" id="nav"><a class="brand" href="#top"><img src="assets/logo.webp" alt="Norma’s Foodlynk logo"><span>Norma’s Foodlynk</span></a><div class="navlinks"><a href="#story">Story</a><a href="#menu">Menu</a><a href="#reels">In motion</a><a href="#order">Order</a></div><div class="navcta"><a class="btn btn-lime" href="#order">Order now</a></div><button class="menu-toggle" id="menuToggle" aria-label="Open navigation">☰</button></nav>
 <main id="top">
-<section class="hero"><div class="hero-bg"><div class="hero-bg-fill" aria-hidden="true"></div><div class="hero-bg-blur"><video autoplay muted loop playsinline poster="assets/video/posters/reel-03.jpg"><source src="assets/video/food-reel-03.mp4" type="video/mp4"></video></div><div class="hero-bg-shade"></div></div><div class="hero-glow"></div><div class="hero-inner"><div class="hero-content"><div class="hero-topline"><span class="dot"></span><span id="status">Kitchen hours · 10:00 AM–5:00 PM</span></div><div class="hero-kicker">TAMALE · GHANA</div><h1 class="serif reveal">Big food.<br><em>Bold</em> cravings.</h1><p class="hero-sub reveal">Ghanaian favourites, loaded plates and feel-good comfort food made for the craving. Pre-order for pickup or delivery.</p><div class="hero-actions reveal"><a class="btn btn-lime" href="#menu">Explore the menu ↓</a><a class="btn btn-ghost" href="https://wa.me/233500691238?text=Hi%20Norma%E2%80%99s%20Foodlynk!%20I%E2%80%99d%20like%20to%20place%20an%20order." target="_blank" rel="noopener">WhatsApp us ↗</a></div><div class="hero-bottom reveal"><div class="hero-meta"><div><small>Order line</small><strong>050 069 1238</strong></div><div><small>Hours</small><strong>10:00 AM–5:00 PM</strong></div><div><small>Service</small><strong>Pre-order · Pickup · Delivery</strong></div></div><div class="scroll">Scroll to taste ↓</div></div></div><div class="hero-video-card reveal"><div class="video-frame"><video autoplay muted loop playsinline poster="assets/video/posters/reel-03.jpg"><source src="assets/video/food-reel-03.mp4" type="video/mp4"></video><div class="video-frame-overlay"></div><div class="video-label"><span>FOOD IN MOTION</span><strong>Watch the craving.</strong></div></div><div class="hero-video-note">Real food · real plates · Tamale</div></div></div><div class="hero-badge">PRE-ORDER<br>YOUR<br>CRAVING<br>✦</div></section>
+<section class="hero"><div class="hero-bg"><div class="hero-bg-fill" aria-hidden="true"></div><div class="hero-bg-blur"><video autoplay muted loop playsinline poster="assets/video/posters/reel-05.jpg"><source src="assets/video/food-reel-05.mp4" type="video/mp4"></video></div><div class="hero-bg-shade"></div></div><div class="hero-glow"></div><div class="hero-inner"><div class="hero-content"><div class="hero-topline"><span class="dot"></span><span id="status">Kitchen hours · 10:00 AM–5:00 PM</span></div><div class="hero-kicker">TAMALE · GHANA</div><h1 class="serif reveal">Big food.<br><em>Bold</em> cravings.</h1><p class="hero-sub reveal">Ghanaian favourites, loaded plates and feel-good comfort food made for the craving. Pre-order for pickup or delivery.</p><div class="hero-actions reveal"><a class="btn btn-lime" href="#menu">Explore the menu ↓</a><a class="btn btn-ghost" href="https://wa.me/233500691238?text=Hi%20Norma%E2%80%99s%20Foodlynk!%20I%E2%80%99d%20like%20to%20place%20an%20order." target="_blank" rel="noopener">WhatsApp us ↗</a></div><div class="hero-bottom reveal"><div class="hero-meta"><div><small>Order line</small><strong>050 069 1238</strong></div><div><small>Hours</small><strong>10:00 AM–5:00 PM</strong></div><div><small>Service</small><strong>Pre-order · Pickup · Delivery</strong></div></div><div class="scroll">Scroll to taste ↓</div></div></div><div class="hero-video-card reveal"><div class="video-frame"><video autoplay muted loop playsinline poster="assets/video/posters/reel-03.jpg"><source src="assets/video/food-reel-03.mp4" type="video/mp4"></video><div class="video-frame-overlay"></div><div class="video-label"><span>FOOD IN MOTION</span><strong>Watch the craving.</strong></div></div><div class="hero-video-note">Real food · real plates · Tamale</div></div></div><div class="hero-badge">PRE-ORDER<br>YOUR<br>CRAVING<br>✦</div></section>
 <div class="ticker"><div class="ticker-track"><span class="ticker-item">Freshly made <i></i> Tamale <i></i> Big portions <i></i> Pre-order only <i></i> Delivery & pickup <i></i></span><span class="ticker-item">Freshly made <i></i> Tamale <i></i> Big portions <i></i> Pre-order only <i></i> Delivery & pickup <i></i></span></div></div>
 <section class="section intro" id="story"><div class="container intro-grid"><div class="reveal"><div class="eyebrow">The Foodlynk feeling</div><h2 class="serif">Come for the <em>craving.</em><br>Stay for the plate.</h2><p class="lead">Norma’s Foodlynk brings together generous Ghanaian favourites and crowd-pleasers for lunch, dinner cravings, quick bites and “let’s add one more” moments.</p><p class="lead" style="margin-top:15px">From tilapia and banku to loaded fries, jollof, shawarma, chicken, guinea fowl and fresh drinks — the menu is built for flavour and convenience.</p><a class="btn btn-dark" href="#menu" style="margin-top:23px">See what’s cooking →</a></div><div class="photo-stack reveal"><div class="photo-main"><img src="assets/img/food-12.webp" alt="Colourful meal from Norma’s Foodlynk" loading="lazy"></div><div class="photo-small"><img src="assets/img/food-06.webp" alt="Loaded meal from Norma’s Foodlynk" loading="lazy"></div><div class="ingredient-orb">made for<br>the craving</div></div></div></section>
 <section class="section experience"><div class="container"><div class="experience-head reveal"><div><div class="eyebrow" style="color:var(--lime)">A little taste of Norma’s</div><h2 class="serif">Built to make<br>you <em>hungry.</em></h2></div><p class="experience-note">Real dishes. Real photos. No stock-food fantasy. Browse the plates, find your mood, then build your order.</p></div></div><div class="dish-track" id="dishTrack"></div></section>
