@@ -261,6 +261,37 @@
 @media(prefers-reduced-motion:reduce){.nav,.navlinks a,.navlinks a::after{transition:none}}
 </style>
 
+
+<style id="v27-nav-polish">
+/* V27 — navigation/menu visual polish */
+.nav{height:60px!important;width:min(1160px,calc(100% - 40px))!important;padding:5px 9px 5px 13px!important;backdrop-filter:blur(24px) saturate(1.16)!important;-webkit-backdrop-filter:blur(24px) saturate(1.16)!important}
+.brand{gap:9px!important}
+.brand img{width:44px!important;height:44px!important}
+.brand span{font-size:12px!important}
+.navlinks{gap:34px!important;font-size:11px!important;letter-spacing:.01em}
+.navlinks a{height:60px!important;opacity:.56!important}
+.navlinks a.active,.navlinks a:hover{opacity:1!important}
+.navlinks a::after{bottom:8px!important;width:5px!important;height:5px!important;box-shadow:0 0 10px rgba(196,239,82,.5)}
+.navcta .btn{min-width:98px!important;height:36px!important;padding:8px 17px!important;font-size:11px!important}
+.nav.scrolled{height:56px!important;width:min(1120px,calc(100% - 48px))!important}
+.nav.scrolled .brand img{width:41px!important;height:41px!important}
+.nav.scrolled .navlinks a{height:56px!important}
+.nav.scrolled .navlinks a::after{bottom:8px!important}
+@media(max-width:1024px) and (min-width:901px){
+  .nav{width:calc(100% - 34px)!important}
+  .navlinks{gap:24px!important}
+}
+@media(max-width:900px){
+  .nav{height:56px!important;width:calc(100% - 24px)!important;padding:5px 7px 5px 10px!important}
+  .brand img{width:42px!important;height:42px!important}
+  .menu-toggle{width:40px!important;height:40px!important;font-size:18px!important}
+  .nav.open .navlinks{top:63px!important}
+}
+@media(max-width:480px){
+  .nav{width:calc(100% - 14px)!important}
+  .brand span{font-size:11px!important}
+}
+</style>
 <style id="v21-conversion-polish">
 /* V21 — turn the three hero cues into a coherent conversion system */
 .hero-badge{
@@ -694,13 +725,29 @@ window.addEventListener('resize',()=>{if(window.innerWidth>820){nav.classList.re
   window.addEventListener('scroll',syncHeader,{passive:true});
   const setActive=(id)=>links.forEach(a=>a.classList.toggle('active',id && a.getAttribute('href')==='#'+id));
   const observer=new IntersectionObserver(entries=>{
-    if(window.scrollY<90){setActive(null);return;}
+    if(window.scrollY<110){setActive(null);return;}
     const visible=entries.filter(e=>e.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];
     if(visible) setActive(visible.target.id);
-  },{rootMargin:'-30% 0px -55% 0px',threshold:[0,.2,.5,1]});
+  },{rootMargin:'-26% 0px -58% 0px',threshold:[0,.15,.35,.6,.9]});
   sections.forEach(s=>observer.observe(s));
-  if(location.hash && location.hash !== '#top') setActive(location.hash.slice(1));
-  else setActive(null);
+  const syncActiveFromPosition=()=>{
+    if(window.scrollY<110){setActive(null);return;}
+    let best=null,bestScore=-Infinity;
+    sections.forEach(s=>{
+      const r=s.getBoundingClientRect();
+      const score=Math.min(window.innerHeight,r.bottom)-Math.max(90,r.top);
+      if(score>bestScore && r.bottom>90 && r.top<window.innerHeight*.72){best=s;bestScore=score;}
+    });
+    if(best) setActive(best.id);
+  };
+  window.addEventListener('scroll',syncActiveFromPosition,{passive:true});
+  window.addEventListener('hashchange',()=>{
+    if(location.hash==='#top'||!location.hash){setActive(null);}else setActive(location.hash.slice(1));
+  });
+  requestAnimationFrame(()=>{
+    if(location.hash && location.hash !== '#top') setActive(location.hash.slice(1));
+    else setActive(null);
+  });
 })();
 </script>
 </body></html>
