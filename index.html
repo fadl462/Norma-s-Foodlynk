@@ -826,6 +826,58 @@ button,a,input{touch-action:manipulation}
   .smart-craving{top:88px!important}
 }
 </style>
+<style id="v59-precision-header-craving">
+/* V59 — align the nav to the same content rail as the utility bar and put the craving guide in normal hero flow. */
+@media (min-width:901px){
+  .nav,
+  .nav.scrolled{
+    left:50%!important;
+    right:auto!important;
+    transform:translateX(-50%)!important;
+    width:min(1180px,calc(100% - 32px))!important;
+    max-width:1180px!important;
+    box-sizing:border-box!important;
+    padding:5px 0!important;
+    border-radius:0!important;
+  }
+  .nav > .brand{padding-left:0!important;margin-left:0!important}
+  .nav > .navcta{padding-right:0!important;margin-right:0!important}
+  .nav > .brand img{width:44px!important;height:44px!important}
+  .nav > .brand span{font-size:12px!important}
+  .nav > .navlinks{gap:28px!important;font-size:12px!important}
+  .navcta .btn{min-width:94px!important;height:37px!important;font-size:10.5px!important;padding:9px 16px!important}
+
+  .hero-content{
+    max-width:900px!important;
+  }
+  .smart-craving{
+    position:relative!important;
+    top:auto!important;
+    left:auto!important;
+    bottom:auto!important;
+    transform:none!important;
+    width:min(820px,100%)!important;
+    margin:0 auto 30px!important;
+    z-index:8!important;
+  }
+}
+@media (max-width:900px){
+  .smart-craving{
+    position:relative!important;
+    top:auto!important;
+    left:auto!important;
+    bottom:auto!important;
+    transform:none!important;
+    width:100%!important;
+    margin:0 0 24px!important;
+    z-index:8!important;
+  }
+}
+@media (max-width:720px){
+  .smart-craving{margin:0 0 20px!important}
+}
+</style>
+
 </head>
 <body>
 <div class="noise"></div><div class="cursor" id="cursor"></div>
