@@ -878,6 +878,79 @@ button,a,input{touch-action:manipulation}
 }
 </style>
 
+
+<style id="v60-craving-guide-hero-lane">
+/* V60 — place the Craving Guide cleanly in the dedicated lane immediately below the fixed header. */
+@media (min-width:901px){
+  .hero-inner{
+    align-items:flex-start!important;
+    padding-top:120px!important;
+  }
+  .hero-content{
+    position:relative!important;
+    padding-top:0!important;
+  }
+  .smart-craving{
+    position:relative!important;
+    top:auto!important;
+    left:auto!important;
+    transform:translateY(50px)!important;
+    width:min(610px,100%)!important;
+    margin:0 0 50px!important;
+    padding:11px 13px 10px!important;
+    min-height:72px!important;
+    box-sizing:border-box!important;
+    border-radius:18px!important;
+    background:linear-gradient(110deg,rgba(12,13,9,.84),rgba(12,13,9,.58))!important;
+    border:1px solid rgba(255,255,255,.15)!important;
+    box-shadow:0 18px 44px rgba(0,0,0,.22)!important;
+    backdrop-filter:blur(20px) saturate(1.15)!important;
+    -webkit-backdrop-filter:blur(20px) saturate(1.15)!important;
+    z-index:8!important;
+  }
+  .smart-craving-top{
+    display:flex!important;
+    align-items:center!important;
+    justify-content:space-between!important;
+    margin:0 0 4px!important;
+    gap:12px!important;
+  }
+  .smart-craving-label{font-size:7px!important;letter-spacing:.17em!important}
+  .smart-craving-time{font-size:7px!important;letter-spacing:.12em!important}
+  .smart-craving h2{
+    font-size:19px!important;
+    line-height:1.05!important;
+    margin:0 0 3px!important;
+  }
+  .smart-craving p{
+    font-size:9px!important;
+    line-height:1.25!important;
+    margin:0 0 7px!important;
+  }
+  .smart-recommendations{gap:6px!important;flex-wrap:nowrap!important}
+  .smart-recommendation{
+    padding:7px 9px!important;
+    font-size:8px!important;
+    white-space:nowrap!important;
+    overflow:hidden!important;
+    text-overflow:ellipsis!important;
+    min-width:0!important;
+  }
+  .smart-browse{font-size:7px!important;margin-top:7px!important}
+}
+@media (max-width:900px){
+  .smart-craving{
+    transform:none!important;
+    margin:0 0 24px!important;
+  }
+}
+@media (max-width:720px){
+  .smart-craving{padding:11px 12px!important;border-radius:16px!important}
+  .smart-recommendations{flex-wrap:wrap!important}
+  .smart-recommendation{white-space:normal!important}
+}
+</style>
+
 </head>
 <body>
 <div class="noise"></div><div class="cursor" id="cursor"></div>
