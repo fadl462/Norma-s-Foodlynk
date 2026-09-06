@@ -1185,12 +1185,47 @@ button,a,input{touch-action:manipulation}
   .smart-craving{border-color:rgba(196,239,82,.20)!important;box-shadow:0 20px 55px rgba(0,0,0,.28)!important}
 }
 </style>
+<style id="v70-craving-guide-conversation">
+/* V70 — conversational, location-neutral Craving Guide with a visible self-select option. */
+.smart-craving-prompt{
+  display:block!important;
+  width:100%!important;
+  border:0!important;
+  padding:0!important;
+  margin:0 0 18px!important;
+  background:transparent!important;
+  color:rgba(255,255,255,.68)!important;
+  font:600 12px/1.55 inherit!important;
+  letter-spacing:.005em!important;
+  text-align:left!important;
+  cursor:pointer!important;
+  transition:color .2s ease,transform .2s ease!important;
+}
+.smart-craving-prompt span{color:var(--lime)!important;margin-left:4px!important;opacity:.85!important}
+.smart-craving-prompt:hover,.smart-craving-prompt:focus-visible{color:#fff!important;transform:translateX(2px)!important;outline:none!important}
+.smart-browse{
+  display:inline-flex!important;
+  align-items:center!important;
+  gap:6px!important;
+  margin-top:14px!important;
+  padding:9px 13px!important;
+  border:1px solid rgba(255,255,255,.18)!important;
+  border-radius:999px!important;
+  background:rgba(255,255,255,.055)!important;
+  color:rgba(255,255,255,.72)!important;
+  font:800 9px/1 inherit!important;
+  letter-spacing:.08em!important;
+  text-transform:none!important;
+}
+.smart-browse:hover,.smart-browse:focus-visible{background:rgba(196,239,82,.10)!important;border-color:rgba(196,239,82,.42)!important;color:#fff!important}
+@media(max-width:900px){.smart-craving-prompt{font-size:11px!important;margin-bottom:13px!important}.smart-browse{margin-top:10px!important}}
+</style>
 </head>
 <body>
 <div class="noise"></div><div class="cursor" id="cursor"></div>
 <div class="hero-utility" aria-label="Norma’s Foodlynk quick information"><div class="hero-utility-inner"><div class="utility-item"><small>Order line</small><a href="tel:+233500691238">050 069 1238</a></div><div class="utility-item"><small>Kitchen hours</small><span>10:00 AM–5:00 PM</span></div><div class="utility-item"><small>Service</small><span>Pre-order · Pickup · Delivery</span></div></div></div><nav class="nav" id="nav"><a class="brand" href="#top"><img alt="Norma’s Foodlynk logo" src="assets/logo-phone.png"/><span>Norma’s Foodlynk</span></a><div class="navlinks"><a href="#story">Story</a><a href="#menu">Menu</a><a href="#catering">Catering</a><a href="#reels">In motion</a><a href="#order">Order</a></div><div class="navcta"><a class="btn btn-lime" href="#menu">Order now</a></div><button aria-expanded="false" aria-label="Open navigation" class="menu-toggle" id="menuToggle" type="button">☰</button></nav>
 <main id="top">
-<section class="hero"><div class="hero-bg"><video aria-hidden="true" autoplay="" class="hero-background-video" loop="" muted="" playsinline="" poster="assets/video/posters/reel-05.jpg"><source src="assets/video/hero-background.mp4" type="video/mp4"/></video><div class="hero-bg-shade"></div></div><div class="hero-glow"></div><div class="hero-inner"><div class="hero-content"><div class="smart-craving reveal" id="smartCraving" aria-live="polite"><div class="smart-craving-top"><span class="smart-craving-label">NORMA’S CRAVING GUIDE</span><span class="smart-craving-time" id="smartCravingTime">TAMALE TIME</span></div><h2 class="serif" id="smartCravingGreeting">Good to see you, Tamale.</h2><p id="smartCravingPrompt">What are you craving today?</p><div class="smart-recommendations" id="smartRecommendations"></div><button class="smart-browse" id="smartBrowse" type="button">I’ll choose for myself <span>↗</span></button></div><div class="hero-actions reveal"><a class="btn btn-lime" href="#menu">Explore the menu ↓</a><a class="btn btn-ghost" href="https://wa.me/233500691238?text=Hi%20Norma%E2%80%99s%20Foodlynk!%20I’d%20like%20to%20place%20an%20order." rel="noopener noreferrer" target="_blank">WhatsApp us ↗</a></div><div class="hero-bottom reveal"><a aria-label="Scroll to the menu" class="scroll" href="#menu">Scroll to taste ↓</a></div></div><div class="hero-video-card reveal"><div class="video-frame"><video autoplay="" loop="" muted="" playsinline="" poster="assets/video/posters/reel-03.jpg"><source src="assets/video/food-reel-03.mp4" type="video/mp4"/></video><div class="video-frame-overlay"></div><div class="video-label"><span>FOOD IN MOTION</span><strong>Watch the craving.</strong></div></div><div class="hero-video-note">Real food · real plates · Tamale</div></div></div><a class="hero-badge" href="#menu" aria-label="Pre-order your craving and explore the menu"><span class="hero-badge-icon">✦</span><span class="hero-badge-copy">PRE-ORDER<br/>YOUR<br/>CRAVING</span><span class="hero-badge-arrow">↗</span></a></section>
+<section class="hero"><div class="hero-bg"><video aria-hidden="true" autoplay="" class="hero-background-video" loop="" muted="" playsinline="" poster="assets/video/posters/reel-05.jpg"><source src="assets/video/hero-background.mp4" type="video/mp4"/></video><div class="hero-bg-shade"></div></div><div class="hero-glow"></div><div class="hero-inner"><div class="hero-content"><div class="smart-craving reveal" id="smartCraving" aria-live="polite"><div class="smart-craving-top"><span class="smart-craving-label">NORMA’S CRAVING GUIDE</span><span class="smart-craving-time" id="smartCravingTime">TAMALE TIME</span></div><h2 class="serif" id="smartCravingGreeting">Let’s start deliciously.</h2><button class="smart-craving-prompt" id="smartCravingPrompt" type="button">It’s morning — we’d lean toward something warm, filling and refreshing. Tap a plate below and let’s see where it takes you <span>↗</span></button><div class="smart-recommendations" id="smartRecommendations"></div><button class="smart-browse" id="smartBrowse" type="button">I’ll choose for myself <span>↗</span></button></div><div class="hero-actions reveal"><a class="btn btn-lime" href="#menu">Explore the menu ↓</a><a class="btn btn-ghost" href="https://wa.me/233500691238?text=Hi%20Norma%E2%80%99s%20Foodlynk!%20I’d%20like%20to%20place%20an%20order." rel="noopener noreferrer" target="_blank">WhatsApp us ↗</a></div><div class="hero-bottom reveal"><a aria-label="Scroll to the menu" class="scroll" href="#menu">Scroll to taste ↓</a></div></div><div class="hero-video-card reveal"><div class="video-frame"><video autoplay="" loop="" muted="" playsinline="" poster="assets/video/posters/reel-03.jpg"><source src="assets/video/food-reel-03.mp4" type="video/mp4"/></video><div class="video-frame-overlay"></div><div class="video-label"><span>FOOD IN MOTION</span><strong>Watch the craving.</strong></div></div><div class="hero-video-note">Real food · real plates · Tamale</div></div></div><a class="hero-badge" href="#menu" aria-label="Pre-order your craving and explore the menu"><span class="hero-badge-icon">✦</span><span class="hero-badge-copy">PRE-ORDER<br/>YOUR<br/>CRAVING</span><span class="hero-badge-arrow">↗</span></a></section>
 <div class="ticker" aria-label="Norma’s Foodlynk highlights"><div class="ticker-track"><span class="ticker-item">Freshly made <i></i> Tamale <i></i> Big portions <i></i> Pre-order only <i></i> Delivery &amp; pickup</span><span class="ticker-item" aria-hidden="true">Freshly made <i></i> Tamale <i></i> Big portions <i></i> Pre-order only <i></i> Delivery &amp; pickup</span><span class="ticker-item" aria-hidden="true">Freshly made <i></i> Tamale <i></i> Big portions <i></i> Pre-order only <i></i> Delivery &amp; pickup</span><span class="ticker-item" aria-hidden="true">Freshly made <i></i> Tamale <i></i> Big portions <i></i> Pre-order only <i></i> Delivery &amp; pickup</span></div></div>
 <section class="section intro" id="story"><div class="container intro-grid"><div class="reveal"><div class="eyebrow">The Foodlynk feeling</div><h2 class="serif">Come for the <em>craving.</em><br/>Stay for the plate.</h2><p class="lead">Norma’s Foodlynk brings together generous Ghanaian favourites and crowd-pleasers for lunch, dinner cravings, quick bites and “let’s add one more” moments.</p><p class="lead" style="margin-top:15px">From tilapia and banku to loaded fries, jollof, shawarma, chicken, guinea fowl and fresh drinks — the menu is built for flavour and convenience.</p><a class="btn btn-dark" href="#menu" style="margin-top:23px">See what’s cooking →</a></div><div class="photo-stack reveal"><div class="photo-main"><img alt="Colourful meal from Norma’s Foodlynk" loading="lazy" src="assets/img/food-12.webp"/></div><div class="photo-small"><img alt="Loaded meal from Norma’s Foodlynk" loading="lazy" src="assets/img/food-06.webp"/></div><div class="ingredient-orb">made for<br/>the craving</div></div></div></section>
 <section class="section experience"><div class="container"><div class="experience-head reveal"><div><div class="eyebrow" style="color:var(--lime)">A little taste of Norma’s</div><h2 class="serif">Built to make<br/>you <em>hungry.</em></h2></div></div></div><div class="dish-track" id="dishTrack"></div></section>
@@ -1242,12 +1277,16 @@ const smartCravingPrompt=document.getElementById('smartCravingPrompt');
 const smartRecommendations=document.getElementById('smartRecommendations');
 const smartBrowse=document.getElementById('smartBrowse');
 const smartPlans={
-  morning:{greeting:'Good morning, Tamale.',prompt:'Starting the day? Go for something warm, filling and easy to love.',items:[['Braised Rice (Angwamo)','Main Meals'],['Fried Plantain with Egg Stew','Fries & Sides'],['Fresh Fruit Juice','Drinks']]},
-  lunch:{greeting:'Good afternoon, Tamale.',prompt:'Lunch time calls for a proper plate. Here are the strongest matches.',items:[['CheckCheck Fried Rice/Jollof','Main Meals'],['Banku with Tilapia','Main Meals'],['Curry Rice with Chicken','Main Meals']]},
-  afternoon:{greeting:'Afternoon craving?',prompt:'Need a quick bite before the day is done? These are made for it.',items:[['Shawarma','Shawarma & Bites'],['Loaded Fries','Fries & Sides'],['Spicy Chicken Wings (6 pcs)','Chicken & Grills']]},
-  evening:{greeting:'Dinner plans, Tamale?',prompt:'The kitchen closes at 5 PM. Planning ahead? These make strong dinner picks.',items:[['Banku with Tilapia','Main Meals'],['Assorted Fried Rice/Jollof','Main Meals'],['Eba & Egusi Soup','Soups & Stews']]},
-  late:{greeting:'Late-night craving?',prompt:'Norma’s kitchen is closed right now, but you can plan tomorrow’s plate in advance.',items:[['Banku with Tilapia','Main Meals'],['CheckCheck Fried Rice/Jollof','Main Meals'],['Shawarma','Shawarma & Bites']]}
+  morning:{greetings:['Let’s start deliciously.','A fresh start deserves a good plate.','Rise, shine & eat well.','Morning mood: something delicious.'],prompt:'It’s morning — we’d lean toward something warm, filling and refreshing. Tap a plate below and let’s see where it takes you.',items:[['Braised Rice (Angwamo)','Main Meals'],['Fried Plantain with Egg Stew','Fries & Sides'],['Fresh Fruit Juice','Drinks']]},
+  lunch:{greetings:['Lunch has entered the chat.','Your midday craving just checked in.','Ready for a proper plate?','Make lunch the best part of the day.'],prompt:'It’s lunchtime — go for a proper plate with enough flavour to carry the rest of the day. We picked three to tempt you.',items:[['CheckCheck Fried Rice/Jollof','Main Meals'],['Banku with Tilapia','Main Meals'],['Curry Rice with Chicken','Main Meals']]},
+  afternoon:{greetings:['That little hunger is getting louder.','Afternoon cravings have entered.','Need a little something? We’ve got you.','This feels like a snack-worthy moment.'],prompt:'The afternoon calls for something quick, bold and satisfying. These three are our first moves.',items:[['Shawarma','Shawarma & Bites'],['Loaded Fries','Fries & Sides'],['Spicy Chicken Wings (6 pcs)','Chicken & Grills']]},
+  evening:{greetings:['Dinner deserves a little drama.','Thinking ahead to dinner?','Save room for something serious.','Your evening plate is already calling.'],prompt:'The kitchen closes at 5 PM, so if dinner is on your mind, these are the plates we’d have ready in the plan.',items:[['Banku with Tilapia','Main Meals'],['Assorted Fried Rice/Jollof','Main Meals'],['Eba & Egusi Soup','Soups & Stews']]},
+  late:{greetings:['Still thinking about food? We get it.','The craving didn’t clock out, did it?','Late-night thoughts: tomorrow’s plate.','One last craving before bed?'],prompt:'Norma’s kitchen is closed right now, but the craving can plan ahead. Pick tomorrow’s plate from these.',items:[['Banku with Tilapia','Main Meals'],['CheckCheck Fried Rice/Jollof','Main Meals'],['Shawarma','Shawarma & Bites']]}
 };
+function dailyGreeting(greetings){
+  const d=new Date(), start=new Date(d.getFullYear(),0,0), day=Math.floor((d-start)/86400000);
+  return greetings[day%greetings.length];
+}
 function tamaleHour(){const parts=new Intl.DateTimeFormat('en-GB',{timeZone:'Africa/Accra',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date());return Number(parts.find(p=>p.type==='hour')?.value||0)}
 function smartPeriod(h){if(h>=5&&h<11)return'morning';if(h>=11&&h<15)return'lunch';if(h>=15&&h<17)return'afternoon';if(h>=17&&h<21)return'evening';return'late'}
 function smartTimeLabel(h){const now=new Date();return new Intl.DateTimeFormat('en-GB',{timeZone:'Africa/Accra',hour:'numeric',minute:'2-digit',hour12:true}).format(now).toUpperCase()+' · TAMALE'}
@@ -1262,11 +1301,13 @@ function smartShowMenu(search,category){
 function renderSmartGuide(){
   const h=tamaleHour(),period=smartPeriod(h),plan=smartPlans[period];
   smartCravingTime.textContent=smartTimeLabel(h);
-  smartCravingGreeting.textContent=plan.greeting;
+  smartCravingGreeting.textContent=dailyGreeting(plan.greetings);
   smartCravingPrompt.textContent=plan.prompt;
   smartRecommendations.innerHTML=plan.items.map((item,i)=>`<button type="button" class="smart-recommendation" data-smart-search="${item[0].replaceAll('"','&quot;')}" data-smart-category="${item[1].replaceAll('"','&quot;')}">${i===0?'<strong>BEST MATCH</strong> · ':''}${item[0]} <span>↗</span></button>`).join('');
 }
 smartRecommendations.addEventListener('click',e=>{const b=e.target.closest('[data-smart-search]');if(!b)return;smartShowMenu(b.dataset.smartSearch,b.dataset.smartCategory)});
+smartCravingPrompt.addEventListener('click',()=>smartShowMenu('', planCategory()));
+function planCategory(){const p=smartPeriod(tamaleHour());return smartPlans[p].items[0]?.[1]||'All'}
 smartBrowse.addEventListener('click',()=>smartShowMenu('', 'All'));
 renderSmartGuide();
 setInterval(renderSmartGuide,60000);
