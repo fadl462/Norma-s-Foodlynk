@@ -2875,6 +2875,134 @@ button,a,input{touch-action:manipulation}
   .hero-chef{transform:none!important;}
 }
 </style>
+
+<style id="v89-mobile-phone-optimization">
+/* V89 — dedicated phone optimization for the new chef-led hero. */
+@media (max-width: 600px){
+  html,body{overflow-x:hidden!important}
+
+  /* Compact, readable phone header. */
+  .hero-utility{height:32px!important;min-height:32px!important}
+  .hero-utility .utility-item:first-child{height:32px!important;gap:8px!important}
+  .hero-utility .utility-item:first-child small{font-size:8px!important;letter-spacing:.14em!important}
+  .hero-utility .utility-item:first-child a{font-size:11.5px!important}
+  .nav,.nav.scrolled{
+    top:30px!important;
+    height:54px!important;
+    min-height:54px!important;
+    width:calc(100% - 14px)!important;
+    padding:4px 6px 4px 8px!important;
+  }
+  .nav > .brand{height:44px!important;gap:7px!important}
+  .nav > .brand img{width:40px!important;height:40px!important;flex-basis:40px!important}
+  .nav > .brand span{font-size:10.5px!important}
+  .navcta .btn{min-width:80px!important;height:36px!important;font-size:9.5px!important;padding:8px 10px!important}
+  .nav > .menu-toggle{width:36px!important;height:36px!important;flex-basis:36px!important;font-size:16px!important}
+
+  /* Dedicated phone hero: guide first, chef anchored to the bottom, ticker immediately after. */
+  .hero{
+    min-height:calc(100svh - 32px)!important;
+    height:auto!important;
+    margin:0!important;
+    padding:0!important;
+    overflow:hidden!important;
+  }
+  .hero-bg video,
+  .hero-background-video{
+    object-position:center center!important;
+    filter:saturate(1.04) contrast(1.02) brightness(.48)!important;
+  }
+  .hero-bg-shade{
+    background:
+      linear-gradient(180deg,rgba(4,4,3,.42) 0%,rgba(4,4,3,.48) 42%,rgba(4,4,3,.94) 100%)!important;
+  }
+  .hero-inner{
+    width:calc(100% - 24px)!important;
+    min-height:calc(100svh - 32px)!important;
+    height:auto!important;
+    margin:0 auto!important;
+    padding:94px 0 142px!important;
+    display:block!important;
+    position:relative!important;
+    box-sizing:border-box!important;
+  }
+  .hero-content{position:relative!important;z-index:8!important;width:100%!important;max-width:none!important;padding:0!important}
+
+  .smart-craving,
+  .smart-craving.reveal,
+  .smart-craving.reveal.visible{
+    width:100%!important;
+    margin:0!important;
+    padding:18px 15px 15px!important;
+    border-radius:21px!important;
+    background:rgba(9,9,8,.76)!important;
+    border:1px solid rgba(196,239,82,.28)!important;
+    box-shadow:0 18px 55px rgba(0,0,0,.30)!important;
+    backdrop-filter:blur(16px)!important;
+    -webkit-backdrop-filter:blur(16px)!important;
+  }
+  .smart-craving-top{margin-bottom:9px!important}
+  .smart-craving-label{font-size:7.5px!important;letter-spacing:.17em!important}
+  .smart-craving h2{font-size:clamp(27px,8.1vw,34px)!important;line-height:1!important;margin:0 0 11px!important}
+  .smart-craving-prompt{font-size:11px!important;line-height:1.48!important;margin:0 0 12px!important;color:rgba(255,255,255,.72)!important}
+  .smart-recommendations{grid-template-columns:1fr!important;gap:6px!important}
+  .smart-recommendation{min-height:45px!important;padding:9px 11px!important;border-radius:13px!important;font-size:10px!important}
+  .smart-browse{min-height:39px!important;margin-top:10px!important;padding:9px 12px!important;font-size:8.5px!important}
+
+  /* The main hero action row is intentionally absent on phones; the nav and guide are the actions. */
+  .hero-actions{display:none!important}
+  .hero-bottom{display:none!important}
+
+  /* Chef becomes a deliberate lower-frame portrait rather than a floating side object. */
+  .hero-chef{
+    z-index:4!important;
+    right:-4vw!important;
+    bottom:0!important;
+    width:min(63vw,315px)!important;
+    max-width:none!important;
+    opacity:.90!important;
+    transform:rotate(.35deg) translateZ(0)!important;
+    filter:drop-shadow(0 24px 30px rgba(0,0,0,.42))!important;
+  }
+  .hero-chef-glow{
+    z-index:3!important;
+    right:-12vw!important;
+    bottom:-10vw!important;
+    width:70vw!important;
+    height:70vw!important;
+    opacity:.48!important;
+  }
+
+  /* Keep the first content section from feeling detached from the hero. */
+  .ticker{margin-top:0!important;position:relative!important;z-index:10!important}
+
+  /* Phone menu drawer stays easy to reach and scroll. */
+  .nav.open > .navlinks{top:60px!important;max-height:calc(100svh - 98px)!important}
+}
+
+@media (max-width:380px){
+  .hero-inner{width:calc(100% - 20px)!important;padding-top:92px!important;padding-bottom:128px!important}
+  .nav,.nav.scrolled{width:calc(100% - 10px)!important}
+  .nav > .brand img{width:38px!important;height:38px!important;flex-basis:38px!important}
+  .nav > .brand span{font-size:9.5px!important}
+  .navcta .btn{min-width:75px!important;font-size:9px!important}
+  .hero-chef{width:min(66vw,285px)!important;right:-5vw!important;opacity:.86!important}
+  .smart-craving{padding:17px 13px 14px!important}
+  .smart-craving h2{font-size:26px!important}
+}
+
+@media (max-width:600px) and (orientation:landscape){
+  .hero{min-height:calc(100svh - 24px)!important}
+  .hero-inner{min-height:calc(100svh - 24px)!important;padding:78px 0 80px!important}
+  .hero-chef{width:min(43vw,250px)!important;right:-2vw!important}
+  .smart-craving{width:min(72vw,520px)!important}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .hero-chef{transform:none!important}
+}
+</style>
+
 </head>
 <body>
 <div class="noise"></div><div class="cursor" id="cursor"></div>
