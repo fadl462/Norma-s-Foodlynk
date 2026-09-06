@@ -3004,6 +3004,98 @@ button,a,input{touch-action:manipulation}
 }
 </style>
 
+
+<style id="v91-mobile-hero-polish">
+/* V91 — mobile-first hero composition: tighter guide, connected chef, cleaner frame. */
+@media (max-width:600px){
+  .hero{
+    min-height:calc(100svh - 32px)!important;
+    height:auto!important;
+    overflow:hidden!important;
+    background:#090807!important;
+  }
+  .hero-inner{
+    width:calc(100% - 24px)!important;
+    min-height:calc(100svh - 32px)!important;
+    padding:88px 0 0!important;
+  }
+  .smart-craving,
+  .smart-craving.reveal,
+  .smart-craving.reveal.visible{
+    padding:17px 15px 14px!important;
+    border-radius:20px!important;
+    background:rgba(9,9,8,.82)!important;
+    box-shadow:0 14px 42px rgba(0,0,0,.28)!important;
+  }
+  .smart-craving-top{margin-bottom:8px!important}
+  .smart-craving h2{
+    font-size:clamp(26px,7.9vw,32px)!important;
+    line-height:.98!important;
+    margin-bottom:10px!important;
+    max-width:95%!important;
+  }
+  .smart-craving-prompt{
+    font-size:10.5px!important;
+    line-height:1.45!important;
+    margin-bottom:11px!important;
+    max-width:97%!important;
+  }
+  .smart-recommendations{gap:6px!important}
+  .smart-recommendation{
+    min-height:48px!important;
+    padding:10px 12px!important;
+    font-size:10.5px!important;
+    border-radius:13px!important;
+  }
+  .smart-browse{
+    min-height:38px!important;
+    margin-top:9px!important;
+    font-size:8.5px!important;
+    padding:8px 12px!important;
+  }
+
+  /* The chef is now a connected lower-frame subject, slightly overlapping the guide. */
+  .hero-chef{
+    z-index:5!important;
+    right:0!important;
+    bottom:-1px!important;
+    width:min(68vw,340px)!important;
+    opacity:.94!important;
+    transform:rotate(.2deg) translateZ(0)!important;
+    filter:drop-shadow(0 20px 28px rgba(0,0,0,.45))!important;
+  }
+  .hero-chef-glow{
+    z-index:3!important;
+    right:-8vw!important;
+    bottom:-7vw!important;
+    width:72vw!important;
+    height:72vw!important;
+    opacity:.42!important;
+  }
+
+  /* Keep the lower part of the hero visually connected to the ticker. */
+  .hero::after{
+    content:"";
+    position:absolute;
+    left:0;right:0;bottom:0;
+    height:24%;
+    z-index:2;
+    pointer-events:none;
+    background:linear-gradient(180deg,transparent 0%,rgba(8,7,5,.18) 45%,rgba(8,7,5,.62) 100%);
+  }
+  .ticker{margin-top:0!important;position:relative!important;z-index:20!important}
+}
+
+@media (max-width:380px){
+  .hero-inner{width:calc(100% - 18px)!important;padding-top:86px!important}
+  .smart-craving{padding:16px 13px 13px!important}
+  .smart-craving h2{font-size:25px!important}
+  .smart-craving-prompt{font-size:10px!important}
+  .smart-recommendation{min-height:46px!important;font-size:10px!important}
+  .hero-chef{width:min(70vw,300px)!important;right:0!important}
+}
+</style>
+
 </head>
 <body>
 <div class="noise"></div><div class="cursor" id="cursor"></div>
