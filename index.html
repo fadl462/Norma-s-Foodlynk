@@ -1459,6 +1459,164 @@ button,a,input{touch-action:manipulation}
 }
 </style>
 
+<style id="v72-mobile-type-scale">
+/* V72 — mobile readability pass. Increase typography substantially on phones without changing desktop art direction. */
+@media (max-width:600px){
+  /* Quick info strip: still compact, but actually readable. */
+  .hero-utility{height:36px!important}
+  .hero-utility-inner{width:calc(100% - 18px)!important}
+  .utility-item small{font-size:8px!important;letter-spacing:.09em!important}
+  .utility-item span,.utility-item a{font-size:10px!important;line-height:1.15!important}
+
+  /* Header */
+  .nav > .brand span{font-size:13px!important;font-weight:800!important}
+  .navcta .btn{font-size:13px!important;min-width:108px!important;height:42px!important;padding:10px 15px!important}
+  .menu-toggle{font-size:21px!important}
+
+  /* Craving Guide — this is the primary mobile hero experience. */
+  .smart-craving,
+  .smart-craving.reveal,
+  .smart-craving.reveal.visible{
+    padding:18px 16px 16px!important;
+    border-radius:19px!important;
+  }
+  .smart-craving-top{margin-bottom:9px!important;gap:12px!important}
+  .smart-craving-label{font-size:10px!important;letter-spacing:.18em!important;line-height:1.2!important}
+  .smart-craving-time{font-size:9px!important;letter-spacing:.08em!important}
+  .smart-craving h2{font-size:30px!important;line-height:1.03!important;letter-spacing:-.035em!important;margin:0 0 10px!important}
+  .smart-craving-prompt{
+    display:block!important;
+    width:100%!important;
+    margin:0 0 14px!important;
+    padding:0!important;
+    font-size:14px!important;
+    line-height:1.45!important;
+    color:rgba(255,255,255,.72)!important;
+    text-align:left!important;
+  }
+  .smart-recommendations{display:grid!important;grid-template-columns:1fr!important;gap:7px!important}
+  .smart-recommendation{
+    width:100%!important;
+    min-height:58px!important;
+    padding:13px 13px!important;
+    border-radius:14px!important;
+    font-size:14px!important;
+    line-height:1.25!important;
+    text-align:left!important;
+  }
+  .smart-recommendation strong{font-size:11px!important;letter-spacing:.06em!important}
+  .smart-recommendation span:last-child{font-size:14px!important;margin-left:auto!important}
+  .smart-browse{
+    display:inline-flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    min-height:48px!important;
+    margin-top:9px!important;
+    padding:10px 16px!important;
+    border-radius:999px!important;
+    font-size:13px!important;
+  }
+
+  /* Hero CTAs */
+  .hero-actions{gap:10px!important;margin-top:18px!important}
+  .hero-actions .btn{
+    min-height:50px!important;
+    padding:12px 15px!important;
+    font-size:14px!important;
+    line-height:1.1!important;
+  }
+  .hero-bottom{margin-top:18px!important}
+  .hero .scroll{min-height:44px!important;padding:11px 16px!important;font-size:11px!important;letter-spacing:.1em!important}
+
+  /* Ticker */
+  .ticker-track{padding:14px 0!important;font-size:13px!important;letter-spacing:.08em!important}
+  .ticker-item{gap:22px!important;padding-right:22px!important}
+  .ticker-item i{width:6px!important;height:6px!important}
+
+  /* Section typography */
+  .eyebrow{font-size:10px!important;letter-spacing:.17em!important;line-height:1.3!important}
+  .section h2,
+  .intro h2,
+  .experience h2,
+  .menu-top h2,
+  .reels h2,
+  .order h2{font-size:clamp(38px,10.5vw,48px)!important;line-height:.94!important}
+  .lead{font-size:16px!important;line-height:1.65!important}
+
+  /* Menu */
+  .menu-top{margin-bottom:22px!important}
+  .menu-sub{font-size:15px!important;line-height:1.6!important}
+  .menu-tools{display:block!important;margin-bottom:18px!important}
+  .search{width:100%!important;box-sizing:border-box!important;min-height:48px!important;padding:12px 15px!important;font-size:16px!important}
+  .chips{gap:8px!important;padding-bottom:9px!important}
+  .chip{padding:10px 14px!important;font-size:13px!important;min-height:42px!important}
+  .menu-grid{grid-template-columns:1fr!important;gap:14px!important}
+  .menu-card{min-height:0!important;border-radius:22px!important}
+  .menu-image{height:220px!important}
+  .menu-tag{font-size:10px!important;padding:8px 10px!important}
+  .menu-info{padding:17px 17px 16px!important}
+  .menu-info h3{font-size:19px!important;line-height:1.25!important}
+  .menu-info p{font-size:14px!important;line-height:1.5!important}
+  .price{font-size:20px!important}
+  .add{min-height:44px!important;padding:10px 15px!important;font-size:13px!important}
+  .category-label{font-size:12px!important;letter-spacing:.15em!important}
+  .menu-note{font-size:13px!important;line-height:1.5!important}
+
+  /* Catering */
+  .catering-intro h2{font-size:clamp(40px,11vw,52px)!important;line-height:.94!important}
+  .catering-intro p{font-size:15px!important;line-height:1.65!important}
+  .catering-type span{font-size:11px!important}
+  .catering-type strong{font-size:20px!important}
+  .catering-type small{font-size:13px!important;line-height:1.5!important}
+  .catering-card-top h3{font-size:34px!important;line-height:.98!important}
+  .catering-card-top p{font-size:15px!important;line-height:1.6!important}
+  .catering-form label{font-size:11px!important}
+  .catering-form input,.catering-form select,.catering-form textarea{font-size:16px!important;min-height:48px!important;padding:12px 13px!important}
+  .catering-form textarea{min-height:120px!important}
+  .catering-form .btn{font-size:14px!important;min-height:50px!important}
+  .catering-note{font-size:12px!important;line-height:1.55!important}
+
+  /* Reels */
+  .reel-feature-copy h3{font-size:36px!important}
+  .reel-feature-copy p{font-size:15px!important;line-height:1.55!important}
+  .reel-tile-copy small{font-size:10px!important}
+  .reel-tile-copy strong{font-size:15px!important}
+
+  /* Order / basket */
+  .order-copy p{font-size:16px!important;line-height:1.65!important}
+  .order-actions .btn{font-size:14px!important;min-height:48px!important}
+  .basket-count{font-size:12px!important;padding:7px 10px!important}
+  .basket-empty{font-size:15px!important;line-height:1.55!important}
+  .basket-name{font-size:15px!important}
+  .basket-meta{font-size:13px!important}
+  .qty button{width:34px!important;height:34px!important}
+  .basket-total{font-size:21px!important}
+  .delivery button{min-height:46px!important;font-size:14px!important}
+  .basket-actions .btn{font-size:13px!important;min-height:48px!important}
+
+  /* Footer */
+  .footer-cta h2{font-size:clamp(42px,12vw,58px)!important;line-height:.9!important}
+  .footer p,.footer a{font-size:15px!important;line-height:1.6!important}
+  .footer-contact strong{font-size:18px!important}
+  .footer-contact small,.footer-hours small{font-size:10px!important}
+  .footer-hours p{font-size:14px!important}
+  .footer-bottom{font-size:12px!important}
+}
+
+@media (max-width:380px){
+  .utility-item small{font-size:7px!important}
+  .utility-item span,.utility-item a{font-size:9px!important}
+  .nav > .brand span{font-size:12px!important}
+  .navcta .btn{font-size:12px!important;min-width:100px!important}
+  .smart-craving h2{font-size:28px!important}
+  .smart-craving-prompt{font-size:13.5px!important}
+  .smart-recommendation{font-size:13.5px!important}
+  .hero-actions .btn{font-size:13.5px!important}
+  .section h2,.intro h2,.experience h2,.menu-top h2,.reels h2,.order h2{font-size:clamp(36px,10.8vw,44px)!important}
+  .menu-image{height:205px!important}
+}
+</style>
+
 </head>
 <body>
 <div class="noise"></div><div class="cursor" id="cursor"></div>
@@ -2308,3 +2466,4 @@ window.addEventListener('resize',()=>{if(window.innerWidth>820){nav.classList.re
   }
 }
 </style>
+
