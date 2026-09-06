@@ -1520,26 +1520,31 @@ window.addEventListener('resize',()=>{if(window.innerWidth>820){nav.classList.re
   .smart-browse{margin-top:5px!important}
 }
 </style>
-<style id="v55-craving-guide-top-layout">
-/* V55 — place the Craving Guide in a dedicated top lane so it never overlaps the hero headline. */
+<style id="v56-craving-guide-position-fix">
+/* V56 — give the Craving Guide its own clear lane below the fixed header.
+   It never sits over the hero headline or gets hidden beneath the navigation. */
 .smart-craving{
   position:absolute!important;
-  top:20px!important;
+  top:52px!important;
   left:50%!important;
+  bottom:auto!important;
   transform:translateX(-50%)!important;
-  width:min(760px,calc(100% - 40px))!important;
+  width:min(680px,calc(100% - 360px))!important;
   margin:0!important;
   z-index:8!important;
 }
 .hero-inner{position:relative!important}
 .hero-content{position:static!important}
+@media(max-width:1100px){
+  .smart-craving{top:52px!important;width:min(680px,calc(100% - 260px))!important}
+}
 @media(max-width:900px){
-  .smart-craving{top:16px!important;width:calc(100% - 32px)!important}
+  .smart-craving{top:48px!important;width:min(620px,calc(100% - 110px))!important}
 }
 @media(max-width:720px){
-  .smart-craving{top:14px!important;width:calc(100% - 28px)!important}
+  .smart-craving{top:46px!important;left:13px!important;transform:none!important;width:calc(100% - 26px)!important}
 }
 @media(max-width:600px){
-  .smart-craving{top:12px!important;width:calc(100% - 26px)!important}
+  .smart-craving{top:42px!important;width:calc(100% - 26px)!important}
 }
 </style>
