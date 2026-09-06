@@ -1520,3 +1520,26 @@ window.addEventListener('resize',()=>{if(window.innerWidth>820){nav.classList.re
   .smart-browse{margin-top:5px!important}
 }
 </style>
+<style id="v55-craving-guide-top-layout">
+/* V55 — place the Craving Guide in a dedicated top lane so it never overlaps the hero headline. */
+.smart-craving{
+  position:absolute!important;
+  top:20px!important;
+  left:50%!important;
+  transform:translateX(-50%)!important;
+  width:min(760px,calc(100% - 40px))!important;
+  margin:0!important;
+  z-index:8!important;
+}
+.hero-inner{position:relative!important}
+.hero-content{position:static!important}
+@media(max-width:900px){
+  .smart-craving{top:16px!important;width:calc(100% - 32px)!important}
+}
+@media(max-width:720px){
+  .smart-craving{top:14px!important;width:calc(100% - 28px)!important}
+}
+@media(max-width:600px){
+  .smart-craving{top:12px!important;width:calc(100% - 26px)!important}
+}
+</style>
