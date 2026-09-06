@@ -1656,6 +1656,75 @@ button,a,input{touch-action:manipulation}
   .hero .scroll{font-size:12.5px!important}
 }
 </style>
+
+<style id="v74-scroll-nav-alignment">
+/* V74 — keep the desktop header on the same centered rail while scrolling.
+   Prevents the scrolled state from becoming a full-width/offset bar. */
+@media (min-width:901px){
+  .nav.scrolled{
+    top:14px!important;
+    left:50%!important;
+    right:auto!important;
+    transform:translateX(-50%)!important;
+    width:min(1180px,calc(100% - 32px))!important;
+    max-width:1180px!important;
+    height:58px!important;
+    min-height:58px!important;
+    padding:5px 10px 5px 14px!important;
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)!important;
+    align-items:center!important;
+    gap:26px!important;
+    box-sizing:border-box!important;
+    border-radius:9999px!important;
+    border:1px solid rgba(255,255,255,.15)!important;
+    overflow:hidden!important;
+    clip-path:inset(0 round 9999px)!important;
+  }
+  .nav.scrolled > .brand{
+    justify-self:start!important;
+    margin:0!important;
+    padding:0!important;
+    height:100%!important;
+    display:flex!important;
+    align-items:center!important;
+  }
+  .nav.scrolled > .brand img{
+    width:44px!important;
+    height:44px!important;
+    flex:0 0 44px!important;
+  }
+  .nav.scrolled > .brand span{
+    font-size:12px!important;
+  }
+  .nav.scrolled > .navlinks{
+    justify-self:center!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    height:100%!important;
+    gap:28px!important;
+    margin:0!important;
+  }
+  .nav.scrolled > .navlinks a{
+    height:100%!important;
+  }
+  .nav.scrolled > .navcta{
+    justify-self:end!important;
+    margin:0!important;
+    padding:0!important;
+    height:100%!important;
+    display:flex!important;
+    align-items:center!important;
+  }
+  .nav.scrolled > .navcta .btn{
+    min-width:94px!important;
+    height:37px!important;
+    font-size:10.5px!important;
+    padding:9px 16px!important;
+  }
+}
+</style>
 </head>
 <body>
 <div class="noise"></div><div class="cursor" id="cursor"></div>
