@@ -2497,6 +2497,121 @@ button,a,input{touch-action:manipulation}
 }
 </style>
 
+
+<style id="v80-mobile-side-menu">
+/* V80 — premium right-side mobile navigation drawer.
+   Keeps the hamburger accessible while giving the menu a dedicated,
+   high-contrast surface instead of floating over the hero. */
+@media (max-width:600px){
+  .nav.open{
+    z-index:10000!important;
+    overflow:visible!important;
+    clip-path:none!important;
+    isolation:isolate!important;
+  }
+
+  .nav.open > .navlinks{
+    position:absolute!important;
+    top:63px!important;
+    right:-1px!important;
+    left:auto!important;
+    width:min(78vw,360px)!important;
+    height:calc(100svh - 78px)!important;
+    max-height:calc(100svh - 78px)!important;
+    min-height:0!important;
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:stretch!important;
+    justify-content:flex-start!important;
+    gap:0!important;
+    padding:22px 16px 28px!important;
+    background:
+      radial-gradient(circle at 20% 8%,rgba(201,255,57,.10),transparent 32%),
+      linear-gradient(145deg,rgba(25,20,16,.985),rgba(10,10,9,.985))!important;
+    border:1px solid rgba(255,255,255,.14)!important;
+    border-right:0!important;
+    border-radius:28px 0 0 28px!important;
+    box-shadow:-24px 0 70px rgba(0,0,0,.48),0 24px 60px rgba(0,0,0,.34)!important;
+    backdrop-filter:blur(26px) saturate(1.15)!important;
+    -webkit-backdrop-filter:blur(26px) saturate(1.15)!important;
+    overflow-y:auto!important;
+    overflow-x:hidden!important;
+    z-index:10001!important;
+  }
+
+  .nav.open > .navlinks::before{
+    content:"MENU";
+    display:block;
+    color:var(--lime)!important;
+    font-size:10px!important;
+    font-weight:900!important;
+    letter-spacing:.22em!important;
+    padding:2px 10px 16px!important;
+    border-bottom:1px solid rgba(255,255,255,.10)!important;
+    margin-bottom:5px!important;
+  }
+
+  .nav.open > .navlinks a{
+    display:flex!important;
+    align-items:center!important;
+    justify-content:space-between!important;
+    width:100%!important;
+    height:auto!important;
+    min-height:58px!important;
+    flex:0 0 auto!important;
+    padding:15px 10px!important;
+    color:#fff!important;
+    opacity:1!important;
+    font-size:17px!important;
+    font-weight:700!important;
+    letter-spacing:.01em!important;
+    border-bottom:1px solid rgba(255,255,255,.09)!important;
+    border-radius:12px!important;
+    text-decoration:none!important;
+  }
+
+  .nav.open > .navlinks a:last-child{
+    border-bottom:0!important;
+  }
+
+  .nav.open > .navlinks a::after{
+    display:block!important;
+    content:"↗"!important;
+    color:var(--orange)!important;
+    font-size:16px!important;
+    font-weight:800!important;
+    opacity:1!important;
+    transform:none!important;
+  }
+
+  .nav.open > .navlinks a:hover,
+  .nav.open > .navlinks a:focus-visible{
+    background:rgba(201,255,57,.10)!important;
+    color:var(--lime)!important;
+  }
+
+  .nav.open > .navlinks a:active{
+    background:rgba(255,81,35,.14)!important;
+  }
+
+  .nav.open > .menu-toggle{
+    position:relative!important;
+    z-index:10003!important;
+  }
+}
+
+@media (max-width:380px){
+  .nav.open > .navlinks{
+    width:82vw!important;
+    padding-left:14px!important;
+    padding-right:14px!important;
+  }
+  .nav.open > .navlinks a{
+    font-size:16px!important;
+  }
+}
+</style>
+
 </head>
 <body>
 <div class="noise"></div><div class="cursor" id="cursor"></div>
