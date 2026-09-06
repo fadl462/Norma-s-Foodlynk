@@ -951,6 +951,87 @@ button,a,input{touch-action:manipulation}
 }
 </style>
 
+
+<style id="v61-final-craving-guide-fix">
+/* V61 — FINAL CRAVING GUIDE PLACEMENT
+   Dedicated hero lane: left-aligned with the hero content, directly below the fixed header,
+   with real document flow so it can NEVER overlap the headline. */
+@media (min-width:901px){
+  .hero-inner{
+    display:block!important;
+    min-height:100svh!important;
+    padding:120px 0 55px!important;
+    box-sizing:border-box!important;
+  }
+  .hero-content{
+    width:100%!important;
+    max-width:900px!important;
+    margin:0!important;
+    padding:0!important;
+  }
+  .smart-craving{
+    position:relative!important;
+    top:auto!important;
+    right:auto!important;
+    bottom:auto!important;
+    left:auto!important;
+    transform:none!important;
+    float:none!important;
+    display:block!important;
+    width:min(610px,100%)!important;
+    max-width:610px!important;
+    margin:0 0 22px 0!important;
+    padding:11px 13px 10px!important;
+    min-height:0!important;
+    box-sizing:border-box!important;
+    border-radius:18px!important;
+    background:linear-gradient(110deg,rgba(12,13,9,.88),rgba(12,13,9,.62))!important;
+    border:1px solid rgba(255,255,255,.15)!important;
+    box-shadow:0 18px 44px rgba(0,0,0,.22)!important;
+    backdrop-filter:blur(20px) saturate(1.15)!important;
+    -webkit-backdrop-filter:blur(20px) saturate(1.15)!important;
+    z-index:8!important;
+  }
+  .smart-craving-top{margin:0 0 4px!important;gap:12px!important}
+  .smart-craving-label,.smart-craving-time{font-size:7px!important;line-height:1!important}
+  .smart-craving h2{font-size:19px!important;line-height:1.05!important;margin:0 0 3px!important}
+  .smart-craving p{font-size:9px!important;line-height:1.25!important;margin:0 0 7px!important}
+  .smart-recommendations{gap:6px!important;flex-wrap:nowrap!important}
+  .smart-recommendation{font-size:8.5px!important;padding:6px 9px!important;white-space:nowrap!important}
+  .smart-browse{font-size:8px!important;margin-top:5px!important}
+  .hero-kicker{margin-top:0!important}
+}
+@media (max-width:900px){
+  .hero-inner{
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:stretch!important;
+    justify-content:flex-start!important;
+    min-height:100svh!important;
+    padding:112px 0 40px!important;
+    gap:0!important;
+  }
+  .hero-content{width:100%!important;max-width:900px!important;margin:0!important;padding:0!important}
+  .smart-craving{
+    position:relative!important;
+    top:auto!important;
+    right:auto!important;
+    bottom:auto!important;
+    left:auto!important;
+    transform:none!important;
+    float:none!important;
+    width:100%!important;
+    max-width:none!important;
+    margin:0 0 20px!important;
+    box-sizing:border-box!important;
+  }
+}
+@media (max-width:600px){
+  .hero-inner{padding:105px 0 40px!important}
+  .smart-craving{margin-bottom:18px!important;padding:10px 11px!important;border-radius:15px!important}
+  .smart-recommendations{flex-wrap:wrap!important}
+}
+</style>
 </head>
 <body>
 <div class="noise"></div><div class="cursor" id="cursor"></div>
