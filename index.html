@@ -1132,6 +1132,56 @@ button,a,input{touch-action:manipulation}
 }
 </style>
 
+
+<style id="v66-final-hero-polish">
+/* V66 — final editorial polish for the Craving Guide hero composition. */
+@media (min-width:901px){
+  .hero-inner{width:min(1180px,calc(100% - 44px))!important}
+  .hero-content{padding-bottom:56px!important}
+  .smart-craving,
+  .smart-craving.reveal,
+  .smart-craving.reveal.visible{
+    top:166px!important;
+    left:0!important;
+    width:690px!important;
+    max-width:690px!important;
+    min-height:252px!important;
+    padding:27px 27px 25px!important;
+    border-radius:28px!important;
+    border:1px solid rgba(196,239,82,.20)!important;
+    background:
+      radial-gradient(circle at 12% 12%,rgba(196,239,82,.075),transparent 30%),
+      linear-gradient(135deg,rgba(9,10,8,.88),rgba(9,10,8,.68))!important;
+    box-shadow:0 28px 70px rgba(0,0,0,.30),inset 0 1px 0 rgba(255,255,255,.07)!important;
+    backdrop-filter:blur(22px) saturate(1.15)!important;
+    -webkit-backdrop-filter:blur(22px) saturate(1.15)!important;
+  }
+  .smart-craving-top{margin:0 0 12px!important;gap:12px!important}
+  .smart-craving-label{font-size:9px!important;letter-spacing:.22em!important}
+  .smart-craving h2{font-size:38px!important;line-height:.98!important;letter-spacing:-.045em!important;margin:0 0 21px!important}
+  .smart-recommendations{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:11px!important}
+  .smart-recommendation{
+    min-height:66px!important;
+    padding:11px 13px!important;
+    border-radius:17px!important;
+    font-size:10.5px!important;
+    line-height:1.25!important;
+    background:rgba(196,239,82,.075)!important;
+    border-color:rgba(196,239,82,.30)!important;
+  }
+  .smart-recommendation:hover,.smart-recommendation:focus-visible{background:rgba(196,239,82,.15)!important;border-color:rgba(196,239,82,.56)!important}
+  .hero-actions{top:442px!important;gap:10px!important}
+  .hero-actions .btn{min-height:46px!important;padding-inline:17px!important}
+  .hero-bottom{bottom:48px!important}
+}
+@media (min-width:901px) and (max-width:1180px){
+  .smart-craving{width:min(690px,62vw)!important;min-height:240px!important}
+  .smart-craving h2{font-size:34px!important}
+}
+@media (max-width:900px){
+  .smart-craving{border-color:rgba(196,239,82,.20)!important;box-shadow:0 20px 55px rgba(0,0,0,.28)!important}
+}
+</style>
 </head>
 <body>
 <div class="noise"></div><div class="cursor" id="cursor"></div>
