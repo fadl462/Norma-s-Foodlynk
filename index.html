@@ -1958,6 +1958,71 @@ window.addEventListener('resize',()=>{if(window.innerWidth>820){nav.classList.re
   });
 })();
 </script>
+
+<style id="v75-mobile-menu-and-type-fix">
+/* V75 — restore the mobile menu control and raise the remaining small type sizes. */
+@media (max-width:600px){
+  .nav > .menu-toggle{
+    display:grid!important;
+    position:relative!important;
+    top:auto!important;
+    right:auto!important;
+    bottom:auto!important;
+    left:auto!important;
+    align-self:center!important;
+    justify-self:end!important;
+    width:40px!important;
+    height:40px!important;
+    min-width:40px!important;
+    min-height:40px!important;
+    flex:0 0 40px!important;
+    margin:0!important;
+    padding:0!important;
+    place-items:center!important;
+    color:#fff!important;
+    background:rgba(255,255,255,.07)!important;
+    border:1px solid rgba(255,255,255,.18)!important;
+    border-radius:50%!important;
+    font-size:21px!important;
+    line-height:1!important;
+    z-index:50!important;
+    visibility:visible!important;
+    opacity:1!important;
+  }
+  .nav:not(.open) > .menu-toggle{transform:none!important}
+  .nav.open > .menu-toggle{top:auto!important;transform:none!important}
+
+  .utility-item small{font-size:8.5px!important;letter-spacing:.07em!important}
+  .utility-item span,.utility-item a{font-size:10.5px!important}
+
+  .nav > .brand span{font-size:14px!important}
+  .navcta .btn{font-size:14px!important;min-width:108px!important;height:42px!important}
+
+  .smart-craving-label{font-size:11px!important}
+  .smart-craving h2{font-size:32px!important;line-height:1.02!important}
+  .smart-craving-prompt{font-size:15.5px!important;line-height:1.48!important}
+  .smart-recommendation{font-size:16px!important;line-height:1.28!important;min-height:64px!important;padding:14px 14px!important}
+  .smart-recommendation strong{font-size:13.5px!important}
+  .smart-recommendation span:last-child{font-size:16px!important}
+  .smart-browse{font-size:15px!important;min-height:52px!important}
+
+  .hero-actions .btn{font-size:15px!important;min-height:52px!important}
+  .hero .scroll{font-size:14px!important;min-height:52px!important}
+}
+@media (max-width:380px){
+  .nav > .brand span{font-size:13px!important}
+  .navcta .btn{font-size:13px!important;min-width:101px!important}
+  .nav > .menu-toggle{width:38px!important;height:38px!important;min-width:38px!important;min-height:38px!important;flex-basis:38px!important;font-size:20px!important}
+  .smart-craving h2{font-size:29px!important}
+  .smart-craving-prompt{font-size:14.5px!important}
+  .smart-recommendation{font-size:15px!important}
+  .smart-recommendation strong{font-size:12.5px!important}
+  .smart-browse{font-size:14px!important}
+  .hero-actions .btn{font-size:14px!important}
+  .hero .scroll{font-size:13px!important}
+}
+</style>
+
 </body></html>
 <style id="v29-header-alignment">
 /* V29 — precision header alignment */
