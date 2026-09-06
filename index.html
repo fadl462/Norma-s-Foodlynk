@@ -2472,6 +2472,31 @@ button,a,input{touch-action:manipulation}
 }
 </style>
 
+
+<style id="v79-mobile-menu-height-fix">
+/* V79 — fix the mobile dropdown being constrained to the header's height.
+   An earlier desktop alignment rule gives .nav > .navlinks height:100%;
+   on mobile that caused the open panel to clip after the first item. */
+@media (max-width:600px){
+  .nav.open > .navlinks{
+    height:auto!important;
+    min-height:0!important;
+    max-height:calc(100svh - 110px)!important;
+    align-self:auto!important;
+    overflow-y:auto!important;
+    overflow-x:hidden!important;
+  }
+  .nav.open > .navlinks a{
+    flex:0 0 auto!important;
+  }
+}
+@media (max-width:380px){
+  .nav.open > .navlinks{
+    max-height:calc(100svh - 104px)!important;
+  }
+}
+</style>
+
 </head>
 <body>
 <div class="noise"></div><div class="cursor" id="cursor"></div>
