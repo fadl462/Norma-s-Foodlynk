@@ -84,6 +84,50 @@
 
 /* V69 readability polish: catering eyebrow uses the site's high-contrast lime accent instead of orange-red on the dark section. */
 .catering-intro .eyebrow{color:var(--lime)!important;font-weight:900!important;text-shadow:0 0 18px rgba(196,239,82,.08);}
+
+/* V93 — Customer reviews + moderation-ready submission experience */
+.reviews-section{background:#f5f1e6;color:var(--black);position:relative;overflow:hidden}
+.reviews-section:before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;right:-240px;top:-210px;background:radial-gradient(circle,rgba(196,239,82,.28),transparent 68%);pointer-events:none}
+.reviews-head{display:grid;grid-template-columns:1fr .72fr;gap:55px;align-items:end;margin-bottom:42px;position:relative;z-index:1}
+.reviews-head h2{font-size:clamp(54px,7vw,94px);line-height:.88;letter-spacing:-.065em;margin:12px 0 0}
+.reviews-head h2 em{color:var(--orange);font-style:italic;font-weight:600}
+.reviews-intro{color:var(--muted);line-height:1.75;max-width:500px;margin:0}
+.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;position:relative;z-index:1}
+.review-card{background:#fff;border:1px solid rgba(17,17,15,.10);border-radius:26px;padding:25px;min-height:235px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 18px 45px rgba(17,17,15,.06);transition:transform .3s ease,box-shadow .3s ease}
+.review-card:hover{transform:translateY(-5px);box-shadow:0 24px 55px rgba(17,17,15,.11)}
+.review-stars{display:flex;gap:4px;color:var(--orange);font-size:15px;letter-spacing:.04em}
+.review-quote{font-size:17px;line-height:1.6;margin:18px 0 24px;color:#22221f}
+.review-meta{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:14px;border-top:1px solid rgba(17,17,15,.09)}
+.review-name{font-size:11px;letter-spacing:.11em;text-transform:uppercase;font-weight:900}
+.review-source{font-size:9px;color:#8a8880;text-transform:uppercase;letter-spacing:.12em;font-weight:800}
+.review-invite{margin-top:28px;border-radius:30px;background:#11110f;color:#fff;padding:34px;display:grid;grid-template-columns:1fr 1.15fr;gap:42px;align-items:center;position:relative;z-index:1;box-shadow:0 28px 70px rgba(17,17,15,.15)}
+.review-invite h3{font-size:clamp(38px,4vw,58px);line-height:.92;margin:8px 0 14px;letter-spacing:-.05em}
+.review-invite h3 em{color:var(--lime);font-style:italic}
+.review-invite p{color:rgba(255,255,255,.58);line-height:1.7;max-width:470px;margin:0}
+.review-form{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+.review-form label{display:flex;flex-direction:column;gap:7px;font-size:9px;letter-spacing:.1em;text-transform:uppercase;font-weight:900;color:rgba(255,255,255,.72)}
+.review-form input,.review-form select,.review-form textarea{font:inherit;text-transform:none;letter-spacing:0;font-weight:500;font-size:13px;border:1px solid rgba(255,255,255,.14);border-radius:14px;background:rgba(255,255,255,.07);padding:13px 14px;outline:none;color:#fff;box-sizing:border-box}
+.review-form input::placeholder,.review-form textarea::placeholder{color:rgba(255,255,255,.38)}
+.review-form select option{color:#111;background:#fff}
+.review-form textarea{resize:vertical;min-height:115px;line-height:1.5}
+.review-form input:focus,.review-form select:focus,.review-form textarea:focus{border-color:var(--lime);box-shadow:0 0 0 3px rgba(196,239,82,.10)}
+.review-form .full{grid-column:1/-1}
+.review-rating{display:flex;align-items:center;gap:8px;min-height:46px;padding:0 2px}
+.review-rating button{border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.05);color:rgba(255,255,255,.45);width:38px;height:38px;border-radius:50%;cursor:pointer;font-size:16px;transition:.2s}
+.review-rating button.active,.review-rating button:hover{background:var(--lime);border-color:var(--lime);color:var(--black);transform:translateY(-1px)}
+.review-rating input{display:none}
+.review-submit{border:0;cursor:pointer;width:100%;justify-content:center;margin-top:2px}
+.review-moderation-note{grid-column:1/-1;font-size:9px;line-height:1.5;color:rgba(255,255,255,.38);margin:0}
+.review-success{display:none;margin-top:12px;padding:13px 15px;border-radius:14px;background:rgba(196,239,82,.10);border:1px solid rgba(196,239,82,.25);color:#eaf8bf;font-size:11px;line-height:1.5}
+.review-success.show{display:block}
+.review-prompt{margin-top:18px;font-size:12px;color:rgba(17,17,15,.62);line-height:1.6}
+.review-prompt strong{color:var(--black)}
+@media(max-width:900px){.reviews-head{grid-template-columns:1fr;gap:18px}.review-grid{grid-template-columns:1fr 1fr}.review-invite{grid-template-columns:1fr;gap:25px}.review-invite h3{font-size:48px}}
+@media(max-width:600px){.reviews-head h2{font-size:54px}.review-grid{grid-template-columns:1fr}.review-card{min-height:205px;padding:21px;border-radius:22px}.review-quote{font-size:15px}.review-invite{padding:23px;border-radius:23px}.review-invite h3{font-size:39px}.review-form{grid-template-columns:1fr}.review-form .full{grid-column:auto}.review-moderation-note{grid-column:auto}.review-rating{justify-content:flex-start}.review-submit{min-height:52px}}
+
+
+.review-quick-link{display:inline-flex!important;align-items:center;justify-content:center}
+@media(max-width:600px){.order-actions .review-quick-link{width:100%;box-sizing:border-box}}
 </style>
 <style id="norma-restore-polish">
 /* RESTORED CINEMATIC HERO — full-background video, no boxed hero video */
@@ -3128,7 +3172,7 @@ button,a,input{touch-action:manipulation}
 </head>
 <body>
 <div class="noise"></div><div class="cursor" id="cursor"></div>
-<div class="hero-utility" aria-label="Norma’s Foodlynk quick information"><div class="hero-utility-inner"><div class="utility-item"><small>Order line</small><a href="tel:+233500691238">050 069 1238</a></div><div class="utility-item"><small>Kitchen hours</small><span>10:00 AM–5:00 PM</span></div><div class="utility-item"><small>Service</small><span>Pre-order · Pickup · Delivery</span></div></div></div><nav class="nav" id="nav"><a class="brand" href="#top"><img alt="Norma’s Foodlynk logo" src="assets/logo-phone.png"/><span>Norma’s Foodlynk</span></a><div class="navlinks"><a href="#story">Story</a><a href="#menu">Menu</a><a href="#catering">Catering</a><a href="#reels">In motion</a><a href="#order">Order</a></div><div class="navcta"><a class="btn btn-lime" href="#menu">Order now</a></div><button aria-expanded="false" aria-label="Open navigation" class="menu-toggle" id="menuToggle" type="button">☰</button></nav>
+<div class="hero-utility" aria-label="Norma’s Foodlynk quick information"><div class="hero-utility-inner"><div class="utility-item"><small>Order line</small><a href="tel:+233500691238">050 069 1238</a></div><div class="utility-item"><small>Kitchen hours</small><span>10:00 AM–5:00 PM</span></div><div class="utility-item"><small>Service</small><span>Pre-order · Pickup · Delivery</span></div></div></div><nav class="nav" id="nav"><a class="brand" href="#top"><img alt="Norma’s Foodlynk logo" src="assets/logo-phone.png"/><span>Norma’s Foodlynk</span></a><div class="navlinks"><a href="#story">Story</a><a href="#menu">Menu</a><a href="#catering">Catering</a><a href="#reels">In motion</a><a href="#reviews">Reviews</a><a href="#order">Order</a></div><div class="navcta"><a class="btn btn-lime" href="#menu">Order now</a></div><button aria-expanded="false" aria-label="Open navigation" class="menu-toggle" id="menuToggle" type="button">☰</button></nav>
 <main id="top">
 <section class="hero"><div class="hero-bg"><video aria-hidden="true" autoplay="" class="hero-background-video" loop="" muted="" playsinline="" poster="assets/video/posters/reel-05.jpg"><source src="assets/video/hero-background.mp4" type="video/mp4"/></video><div class="hero-bg-shade"></div></div><div class="hero-glow"></div><div class="hero-chef-glow" aria-hidden="true"></div><figure class="hero-chef reveal"><img src="assets/img/norma-chef-cutout.png" alt="Norma’s Foodlynk chef smiling in her signature orange-trimmed chef coat"/></figure><div class="hero-inner"><div class="hero-content"><div class="smart-craving reveal" id="smartCraving" aria-live="polite"><div class="smart-craving-top"><span class="smart-craving-label">NORMA’S CRAVING GUIDE</span><span class="smart-craving-time" id="smartCravingTime">TAMALE TIME</span></div><h2 class="serif" id="smartCravingGreeting">Let’s start deliciously.</h2><button class="smart-craving-prompt" id="smartCravingPrompt" type="button">It’s morning — we’d lean toward something warm, filling and refreshing. Tap a plate below and let’s see where it takes you <span>↗</span></button><div class="smart-recommendations" id="smartRecommendations"></div><button class="smart-browse" id="smartBrowse" type="button">I’ll choose for myself <span>↗</span></button></div><div class="hero-actions reveal"><a class="btn btn-lime" href="#menu">Explore the menu ↓</a><a class="btn btn-ghost" href="https://wa.me/233500691238?text=Hi%20Norma%E2%80%99s%20Foodlynk!%20I’d%20like%20to%20place%20an%20order." rel="noopener noreferrer" target="_blank">WhatsApp us ↗</a></div></div><div class="hero-video-card reveal"><div class="video-frame"><video autoplay="" loop="" muted="" playsinline="" poster="assets/video/posters/reel-03.jpg"><source src="assets/video/food-reel-03.mp4" type="video/mp4"/></video><div class="video-frame-overlay"></div><div class="video-label"><span>FOOD IN MOTION</span><strong>Watch the craving.</strong></div></div><div class="hero-video-note">Real food · real plates · Tamale</div></div></div></section>
 <div class="ticker" aria-label="Norma’s Foodlynk highlights"><div class="ticker-track"><span class="ticker-item">Freshly made <i></i> Tamale <i></i> Big portions <i></i> Pre-order only <i></i> Delivery &amp; pickup</span><span class="ticker-item" aria-hidden="true">Freshly made <i></i> Tamale <i></i> Big portions <i></i> Pre-order only <i></i> Delivery &amp; pickup</span><span class="ticker-item" aria-hidden="true">Freshly made <i></i> Tamale <i></i> Big portions <i></i> Pre-order only <i></i> Delivery &amp; pickup</span><span class="ticker-item" aria-hidden="true">Freshly made <i></i> Tamale <i></i> Big portions <i></i> Pre-order only <i></i> Delivery &amp; pickup</span></div></div>
@@ -3143,10 +3187,40 @@ button,a,input{touch-action:manipulation}
 <div class="reel-small reel-tile reveal"><div class="reel-tile-media"><video autoplay="" loop="" muted="" playsinline=""><source src="assets/video/food-reel-03.mp4" type="video/mp4"/></video></div><div class="reel-tile-copy"><small>04</small><strong>Big flavour energy</strong></div></div>
 <div class="reel-small reel-tile reveal"><div class="reel-tile-media"><video autoplay="" loop="" muted="" playsinline=""><source src="assets/video/food-reel-05.mp4" type="video/mp4"/></video></div><div class="reel-tile-copy"><small>05</small><strong>Big cravings welcome</strong></div></div>
 </div></div></section>
-<section class="section order" id="order"><div class="container order-layout"><div class="order-copy reveal"><div class="eyebrow">Your order, your way</div><h2 class="serif">Build it.<br/>Send it.<br/>Enjoy it.</h2><p>Select your favourites and send the basket to Norma’s on WhatsApp. The team can confirm availability, delivery/pickup details and the final total with you.</p><div class="order-actions"><a class="btn btn-dark" href="tel:+233500691238">Call 050 069 1238</a><a class="btn btn-orange" href="https://wa.me/233500691238" rel="noopener noreferrer" target="_blank">Open WhatsApp ↗</a></div></div><div class="order-box reveal"><div class="basket-head"><div class="eyebrow">Your basket</div><span class="basket-count" id="count">0 items</span></div><div id="basket"><div class="basket-empty">Your basket is empty. Add something delicious from the menu.</div></div><div class="basket-total"><span>Total</span><span id="total">GHS 0</span></div><div class="delivery"><button class="active" data-service="Pickup" type="button">Pickup</button><button data-service="Delivery" type="button">Delivery</button></div><div class="basket-actions"><button class="btn btn-dark" id="whatsapp" type="button">Send on WhatsApp ↗</button><button class="btn" id="clear" style="background:#eee" type="button">Clear basket</button></div></div></div></section>
+<section class="section reviews-section" id="reviews">
+<div class="container">
+<div class="reviews-head reveal">
+<div><div class="eyebrow">From people who have tasted it</div><h2 class="serif">Good food.<br/><em>Real love.</em></h2></div>
+<p class="reviews-intro">The best feedback comes after the first bite. Here are a few words shared by customers about their Norma’s Foodlynk experience. Every new review is checked by the Norma’s team before it appears publicly.</p>
+</div>
+<div class="review-grid" id="reviewGrid">
+<article class="review-card reveal"><div><div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div><p class="review-quote">“The food is very delicious. I really enjoyed it, and I’ll definitely be coming back for more.”</p></div><div class="review-meta"><span class="review-name">Customer · Tamale</span><span class="review-source">Customer review</span></div></article>
+<article class="review-card reveal"><div><div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div><p class="review-quote">“Your food was on point. Thank you so much for the delicious meal — I really enjoyed it.”</p></div><div class="review-meta"><span class="review-name">Customer · Tamale</span><span class="review-source">Customer review</span></div></article>
+<article class="review-card reveal"><div><div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div><p class="review-quote">“Thank you very much. I enjoyed the meal once again. The food never disappoints.”</p></div><div class="review-meta"><span class="review-name">Customer · Tamale</span><span class="review-source">Customer review</span></div></article>
+<article class="review-card reveal"><div><div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div><p class="review-quote">“Sister, thank you so much. Your food is very nice, and I really enjoyed it.”</p></div><div class="review-meta"><span class="review-name">Customer · Tamale</span><span class="review-source">Customer review</span></div></article>
+<article class="review-card reveal"><div><div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div><p class="review-quote">“I received the food and it was good. Thank you so much — I enjoyed it.”</p></div><div class="review-meta"><span class="review-name">Customer · Tamale</span><span class="review-source">Customer review</span></div></article>
+<article class="review-card reveal"><div><div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div><p class="review-quote">“Thank you so much for your patience and kind reception. The warm service made the whole experience even better.”</p></div><div class="review-meta"><span class="review-name">Customer · Tamale</span><span class="review-source">Customer review</span></div></article>
+<article class="review-card reveal"><div><div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div><p class="review-quote">“Your food is very delicious. I really enjoyed it — I’ll definitely be ordering again.”</p></div><div class="review-meta"><span class="review-name">Customer · Tamale</span><span class="review-source">Customer review</span></div></article>
+<article class="review-card reveal"><div><div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div><p class="review-quote">“This Acheké special is dangerous 😂. At this rate, you’re going to finish my savings! Please keep giving us the best.”</p></div><div class="review-meta"><span class="review-name">Customer · Social comment</span><span class="review-source">Customer review</span></div></article>
+</div>
+<div class="review-invite reveal">
+<div><div class="eyebrow" style="color:var(--lime)">Loved your meal?</div><h3 class="serif">Tell us how it<br/><em>made you feel.</em></h3><p>After your meal, come back and share your experience. Your review is sent for moderation first, so the Norma’s team can check it before anything goes live.</p><p class="review-prompt"><strong>Tip:</strong> Tell us what you ordered and what stood out — flavour, portion, service, delivery or the whole experience.</p></div>
+<form class="review-form" id="reviewForm">
+<label>Name / display name<input required name="name" maxlength="60" autocomplete="name" placeholder="e.g. Ama K."/></label>
+<label>What did you order?<input name="order" maxlength="80" placeholder="e.g. Acheké with Tilapia"/></label>
+<label class="full">Your rating<div class="review-rating" role="radiogroup" aria-label="Choose a rating"><button type="button" data-rating="1" aria-label="1 star">★</button><button type="button" data-rating="2" aria-label="2 stars">★</button><button type="button" data-rating="3" aria-label="3 stars">★</button><button type="button" data-rating="4" aria-label="4 stars">★</button><button type="button" data-rating="5" aria-label="5 stars">★</button><input type="hidden" name="rating" id="reviewRating" value="5"/></div></label>
+<label class="full">Your review<textarea required name="comment" maxlength="500" placeholder="Tell us about your meal…"></textarea></label>
+<button class="btn btn-lime review-submit full" type="submit">Submit my review ↗</button>
+<p class="review-moderation-note">Reviews are moderated by Norma’s Foodlynk before publication. Submitting a review does not guarantee that it will be published, and personal contact details should not be included in your comment.</p>
+<div class="review-success full" id="reviewSuccess" role="status">Thank you — your review has been received and is now pending moderation by the Norma’s team.</div>
+</form>
+</div>
+</div>
+</section>
+<section class="section order" id="order"><div class="container order-layout"><div class="order-copy reveal"><div class="eyebrow">Your order, your way</div><h2 class="serif">Build it.<br/>Send it.<br/>Enjoy it.</h2><p>Select your favourites and send the basket to Norma’s on WhatsApp. The team can confirm availability, delivery/pickup details and the final total with you.</p><div class="order-actions"><a class="btn btn-dark" href="tel:+233500691238">Call 050 069 1238</a><a class="btn btn-orange" href="https://wa.me/233500691238" rel="noopener noreferrer" target="_blank">Open WhatsApp ↗</a></div><a class="btn btn-dark review-quick-link" href="#reviews">Loved your meal? Review it ↗</a></div><div class="order-box reveal"><div class="basket-head"><div class="eyebrow">Your basket</div><span class="basket-count" id="count">0 items</span></div><div id="basket"><div class="basket-empty">Your basket is empty. Add something delicious from the menu.</div></div><div class="basket-total"><span>Total</span><span id="total">GHS 0</span></div><div class="delivery"><button class="active" data-service="Pickup" type="button">Pickup</button><button data-service="Delivery" type="button">Delivery</button></div><div class="basket-actions"><button class="btn btn-dark" id="whatsapp" type="button">Send on WhatsApp ↗</button><button class="btn" id="clear" style="background:#eee" type="button">Clear basket</button></div></div></div></section>
 </main>
 
-<footer class="footer" id="footer"><div class="footer-cta"><div class="container footer-cta-inner"><div><div class="eyebrow">One more thing</div><h2 class="serif">Your next craving<br/><em>starts here.</em></h2></div><a class="footer-cta-btn" href="#menu"><span>Build my order</span><b>↗</b></a></div></div><div class="container"><div class="footer-grid"><div class="footer-brand"><img alt="Norma’s Foodlynk" class="footer-logo" src="assets/logo.webp"/><div class="footer-brand-copy"><span class="footer-kicker">NORMA’S FOODLYNK · TAMALE</span><h3 class="serif">Come hungry.<br/><em>Leave happy.</em></h3><p>Big flavours, Ghanaian favourites and feel-good plates made for the craving.</p></div></div><div class="footer-col"><div class="eyebrow" style="color:var(--lime)">Explore</div><nav class="footer-links" aria-label="Footer navigation"><a href="#top">Home <span>↗</span></a><a href="#story">Our story <span>↗</span></a><a href="#menu">Menu <span>↗</span></a><a href="#catering">Catering <span>↗</span></a><a href="#reels">Food in motion <span>↗</span></a><a href="#order">Order <span>↗</span></a></nav></div><div class="footer-col"><div class="eyebrow" style="color:var(--lime)">Order direct</div><div class="footer-contact"><a href="tel:+233500691238"><small>Call</small><strong>050 069 1238</strong></a><a href="https://wa.me/233500691238" rel="noopener noreferrer" target="_blank"><small>WhatsApp</small><strong>Start a chat ↗</strong></a></div><div class="footer-hours"><small>Kitchen hours</small><p>10:00 AM — 5:00 PM<br/>Pre-order only · Delivery &amp; pickup</p></div></div></div><div class="footer-bottom"><span>© 2026 Norma’s Foodlynk</span><span>Tamale, Ghana · Made for cravings.</span><button class="footer-back-top" id="footerBackTop" type="button" aria-label="Back to top"><span>Back to top</span><b>↑</b></button></div></div></footer>
+<footer class="footer" id="footer"><div class="footer-cta"><div class="container footer-cta-inner"><div><div class="eyebrow">One more thing</div><h2 class="serif">Your next craving<br/><em>starts here.</em></h2></div><a class="footer-cta-btn" href="#menu"><span>Build my order</span><b>↗</b></a></div></div><div class="container"><div class="footer-grid"><div class="footer-brand"><img alt="Norma’s Foodlynk" class="footer-logo" src="assets/logo.webp"/><div class="footer-brand-copy"><span class="footer-kicker">NORMA’S FOODLYNK · TAMALE</span><h3 class="serif">Come hungry.<br/><em>Leave happy.</em></h3><p>Big flavours, Ghanaian favourites and feel-good plates made for the craving.</p></div></div><div class="footer-col"><div class="eyebrow" style="color:var(--lime)">Explore</div><nav class="footer-links" aria-label="Footer navigation"><a href="#top">Home <span>↗</span></a><a href="#story">Our story <span>↗</span></a><a href="#menu">Menu <span>↗</span></a><a href="#catering">Catering <span>↗</span></a><a href="#reels">Food in motion <span>↗</span></a><a href="#reviews">Reviews <span>↗</span></a><a href="#order">Order <span>↗</span></a></nav></div><div class="footer-col"><div class="eyebrow" style="color:var(--lime)">Order direct</div><div class="footer-contact"><a href="tel:+233500691238"><small>Call</small><strong>050 069 1238</strong></a><a href="https://wa.me/233500691238" rel="noopener noreferrer" target="_blank"><small>WhatsApp</small><strong>Start a chat ↗</strong></a></div><div class="footer-hours"><small>Kitchen hours</small><p>10:00 AM — 5:00 PM<br/>Pre-order only · Delivery &amp; pickup</p></div></div></div><div class="footer-bottom"><span>© 2026 Norma’s Foodlynk</span><span>Tamale, Ghana · Made for cravings.</span><button class="footer-back-top" id="footerBackTop" type="button" aria-label="Back to top"><span>Back to top</span><b>↑</b></button></div></div></footer>
 <aside class="mini-order-slip" id="miniOrderSlip" aria-live="polite" aria-label="Your selected food"><div class="mini-slip-top"><div><div class="mini-slip-label">Your food slip</div><div class="mini-slip-title">Cravings so far.</div></div><span class="mini-slip-count" id="miniCount">0 items</span></div><div class="mini-slip-list" id="miniList"></div><div class="mini-slip-bottom"><div class="mini-slip-total"><small>Running total</small><strong id="miniTotal">GHS 0</strong></div><button class="mini-slip-cta" id="miniCheckout" type="button">I’m done choosing →</button></div><div class="mini-slip-hint">Keep exploring the menu. When your cravings are complete, tap here to review and send your order.</div></aside><button aria-label="Open your order basket" class="floating-order" id="floatingOrder" type="button"><span class="floating-order-icon">✦</span><span class="floating-order-label">ORDER</span><span class="floating-order-count" id="floatingOrderCount">0</span></button><div class="toast" id="toast">Added to basket.</div><div class="modal" id="modal"><button class="close" onclick="closeModal()" type="button">×</button><img alt="Norma’s Foodlynk dish" id="modalImg"/></div>
 <script>
 const menu=[
@@ -3355,6 +3429,34 @@ window.addEventListener('resize',()=>{if(window.innerWidth>820){nav.classList.re
     if(history.replaceState) history.replaceState(null,'',location.pathname+location.search+'#top');
   });
 })();
+
+// V93 — review submission UI. The production moderation endpoint can be connected at /api/reviews.
+const reviewForm=document.getElementById('reviewForm');
+const reviewRating=document.getElementById('reviewRating');
+const reviewSuccess=document.getElementById('reviewSuccess');
+const reviewRatingButtons=document.querySelectorAll('.review-rating button');
+reviewRatingButtons.forEach(btn=>btn.addEventListener('click',()=>{
+  const value=Number(btn.dataset.rating); reviewRating.value=String(value);
+  reviewRatingButtons.forEach(b=>b.classList.toggle('active',Number(b.dataset.rating)<=value));
+}));
+reviewRatingButtons.forEach(b=>b.classList.toggle('active',Number(b.dataset.rating)<=5));
+reviewForm?.addEventListener('submit',async e=>{
+  e.preventDefault();
+  const data=Object.fromEntries(new FormData(reviewForm).entries());
+  data.rating=Number(data.rating||5); data.createdAt=new Date().toISOString(); data.status='pending';
+  const submit=reviewForm.querySelector('.review-submit'); submit.disabled=true; submit.textContent='Sending for review…';
+  try{
+    const response=await fetch('/api/reviews',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
+    if(!response.ok) throw new Error('Review endpoint unavailable');
+    reviewForm.reset(); reviewRating.value='5'; reviewRatingButtons.forEach(b=>b.classList.toggle('active',Number(b.dataset.rating)<=5));
+    reviewSuccess.classList.add('show'); showToast('Review submitted for moderation.');
+  }catch(err){
+    // Keep the UX honest: do not pretend a review reached the backend when the endpoint is not connected.
+    reviewSuccess.textContent='Your review form is ready, but the moderation service is not connected yet. Please try again once the Norma’s review backend is enabled.';
+    reviewSuccess.classList.add('show');
+  }finally{submit.disabled=false;submit.textContent='Submit my review ↗';}
+});
+
 </script>
 
 
