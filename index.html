@@ -2673,12 +2673,81 @@ button,a,input{touch-action:manipulation}
 /* V83 — master menu taxonomy + explicit search action. */
 @media(max-width:600px){.search-submit{width:36px;height:36px;right:4px}.search-submit svg{width:16px;height:16px}}
 </style>
+<style id="v84-chef-hero-polish">
+/* V84 — replace the hero pre-order badge with the supplied chef portrait, cleanly cut out and treated as a premium foreground subject. */
+.hero-chef-glow{
+  position:absolute;
+  z-index:2;
+  width:min(44vw,620px);
+  height:min(44vw,620px);
+  right:-2vw;
+  bottom:-8vw;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(244,81,30,.34) 0%,rgba(196,239,82,.13) 38%,transparent 70%);
+  filter:blur(34px);
+  pointer-events:none;
+  opacity:.9;
+}
+.hero-chef{
+  position:absolute;
+  z-index:3;
+  right:1.5vw;
+  bottom:-4px;
+  width:min(43vw,590px);
+  margin:0;
+  pointer-events:none;
+  transform:rotate(1.2deg) translateZ(0);
+  transform-origin:bottom center;
+  filter:drop-shadow(0 30px 38px rgba(0,0,0,.34));
+}
+.hero-chef img{
+  display:block;
+  width:100%;
+  height:auto;
+  object-fit:contain;
+  -webkit-user-drag:none;
+  user-select:none;
+}
+.hero-inner{z-index:5!important}
+.hero-bg-shade{z-index:1!important}
+.hero-glow{z-index:2!important}
+@media(max-width:1100px){
+  .hero-chef{right:-1vw;width:min(47vw,540px)}
+  .hero-chef-glow{right:-4vw;width:48vw;height:48vw}
+}
+@media(max-width:900px){
+  .hero-chef{
+    right:-5vw;
+    bottom:-2px;
+    width:min(53vw,430px);
+    opacity:.9;
+    transform:rotate(1deg);
+  }
+  .hero-chef-glow{right:-8vw;bottom:-5vw;width:58vw;height:58vw;opacity:.72}
+  .hero-bg-shade{background:linear-gradient(90deg,rgba(4,4,3,.90) 0%,rgba(4,4,3,.60) 48%,rgba(4,4,3,.24) 100%),linear-gradient(180deg,rgba(4,4,3,.22),rgba(4,4,3,.86) 100%)!important}
+}
+@media(max-width:720px){
+  .hero-chef{
+    right:-9vw;
+    bottom:-6px;
+    width:min(68vw,360px);
+    opacity:.72;
+    transform:rotate(1deg);
+  }
+  .hero-chef-glow{right:-16vw;bottom:-8vw;width:76vw;height:76vw;opacity:.55;filter:blur(28px)}
+  .hero-bg-shade{background:linear-gradient(180deg,rgba(4,4,3,.34) 0%,rgba(4,4,3,.48) 40%,rgba(4,4,3,.96) 100%)!important}
+}
+@media(max-width:520px){
+  .hero-chef{right:-12vw;width:min(72vw,330px);opacity:.60}
+}
+@media(prefers-reduced-motion:reduce){.hero-chef{transform:none}}
+</style>
 </head>
 <body>
 <div class="noise"></div><div class="cursor" id="cursor"></div>
 <div class="hero-utility" aria-label="Norma’s Foodlynk quick information"><div class="hero-utility-inner"><div class="utility-item"><small>Order line</small><a href="tel:+233500691238">050 069 1238</a></div><div class="utility-item"><small>Kitchen hours</small><span>10:00 AM–5:00 PM</span></div><div class="utility-item"><small>Service</small><span>Pre-order · Pickup · Delivery</span></div></div></div><nav class="nav" id="nav"><a class="brand" href="#top"><img alt="Norma’s Foodlynk logo" src="assets/logo-phone.png"/><span>Norma’s Foodlynk</span></a><div class="navlinks"><a href="#story">Story</a><a href="#menu">Menu</a><a href="#catering">Catering</a><a href="#reels">In motion</a><a href="#order">Order</a></div><div class="navcta"><a class="btn btn-lime" href="#menu">Order now</a></div><button aria-expanded="false" aria-label="Open navigation" class="menu-toggle" id="menuToggle" type="button">☰</button></nav>
 <main id="top">
-<section class="hero"><div class="hero-bg"><video aria-hidden="true" autoplay="" class="hero-background-video" loop="" muted="" playsinline="" poster="assets/video/posters/reel-05.jpg"><source src="assets/video/hero-background.mp4" type="video/mp4"/></video><div class="hero-bg-shade"></div></div><div class="hero-glow"></div><div class="hero-inner"><div class="hero-content"><div class="smart-craving reveal" id="smartCraving" aria-live="polite"><div class="smart-craving-top"><span class="smart-craving-label">NORMA’S CRAVING GUIDE</span><span class="smart-craving-time" id="smartCravingTime">TAMALE TIME</span></div><h2 class="serif" id="smartCravingGreeting">Let’s start deliciously.</h2><button class="smart-craving-prompt" id="smartCravingPrompt" type="button">It’s morning — we’d lean toward something warm, filling and refreshing. Tap a plate below and let’s see where it takes you <span>↗</span></button><div class="smart-recommendations" id="smartRecommendations"></div><button class="smart-browse" id="smartBrowse" type="button">I’ll choose for myself <span>↗</span></button></div><div class="hero-actions reveal"><a class="btn btn-lime" href="#menu">Explore the menu ↓</a><a class="btn btn-ghost" href="https://wa.me/233500691238?text=Hi%20Norma%E2%80%99s%20Foodlynk!%20I’d%20like%20to%20place%20an%20order." rel="noopener noreferrer" target="_blank">WhatsApp us ↗</a></div><div class="hero-bottom reveal"><a aria-label="Scroll to the menu" class="scroll" href="#menu">Scroll to taste ↓</a></div></div><div class="hero-video-card reveal"><div class="video-frame"><video autoplay="" loop="" muted="" playsinline="" poster="assets/video/posters/reel-03.jpg"><source src="assets/video/food-reel-03.mp4" type="video/mp4"/></video><div class="video-frame-overlay"></div><div class="video-label"><span>FOOD IN MOTION</span><strong>Watch the craving.</strong></div></div><div class="hero-video-note">Real food · real plates · Tamale</div></div></div><a class="hero-badge" href="#menu" aria-label="Pre-order your craving and explore the menu"><span class="hero-badge-icon">✦</span><span class="hero-badge-copy">PRE-ORDER<br/>YOUR<br/>CRAVING</span><span class="hero-badge-arrow">↗</span></a></section>
+<section class="hero"><div class="hero-bg"><video aria-hidden="true" autoplay="" class="hero-background-video" loop="" muted="" playsinline="" poster="assets/video/posters/reel-05.jpg"><source src="assets/video/hero-background.mp4" type="video/mp4"/></video><div class="hero-bg-shade"></div></div><div class="hero-glow"></div><div class="hero-chef-glow" aria-hidden="true"></div><figure class="hero-chef reveal"><img src="assets/img/norma-chef-cutout.png" alt="Norma’s Foodlynk chef smiling in her signature orange-trimmed chef coat"/></figure><div class="hero-inner"><div class="hero-content"><div class="smart-craving reveal" id="smartCraving" aria-live="polite"><div class="smart-craving-top"><span class="smart-craving-label">NORMA’S CRAVING GUIDE</span><span class="smart-craving-time" id="smartCravingTime">TAMALE TIME</span></div><h2 class="serif" id="smartCravingGreeting">Let’s start deliciously.</h2><button class="smart-craving-prompt" id="smartCravingPrompt" type="button">It’s morning — we’d lean toward something warm, filling and refreshing. Tap a plate below and let’s see where it takes you <span>↗</span></button><div class="smart-recommendations" id="smartRecommendations"></div><button class="smart-browse" id="smartBrowse" type="button">I’ll choose for myself <span>↗</span></button></div><div class="hero-actions reveal"><a class="btn btn-lime" href="#menu">Explore the menu ↓</a><a class="btn btn-ghost" href="https://wa.me/233500691238?text=Hi%20Norma%E2%80%99s%20Foodlynk!%20I’d%20like%20to%20place%20an%20order." rel="noopener noreferrer" target="_blank">WhatsApp us ↗</a></div><div class="hero-bottom reveal"><a aria-label="Scroll to the menu" class="scroll" href="#menu">Scroll to taste ↓</a></div></div><div class="hero-video-card reveal"><div class="video-frame"><video autoplay="" loop="" muted="" playsinline="" poster="assets/video/posters/reel-03.jpg"><source src="assets/video/food-reel-03.mp4" type="video/mp4"/></video><div class="video-frame-overlay"></div><div class="video-label"><span>FOOD IN MOTION</span><strong>Watch the craving.</strong></div></div><div class="hero-video-note">Real food · real plates · Tamale</div></div></div></section>
 <div class="ticker" aria-label="Norma’s Foodlynk highlights"><div class="ticker-track"><span class="ticker-item">Freshly made <i></i> Tamale <i></i> Big portions <i></i> Pre-order only <i></i> Delivery &amp; pickup</span><span class="ticker-item" aria-hidden="true">Freshly made <i></i> Tamale <i></i> Big portions <i></i> Pre-order only <i></i> Delivery &amp; pickup</span><span class="ticker-item" aria-hidden="true">Freshly made <i></i> Tamale <i></i> Big portions <i></i> Pre-order only <i></i> Delivery &amp; pickup</span><span class="ticker-item" aria-hidden="true">Freshly made <i></i> Tamale <i></i> Big portions <i></i> Pre-order only <i></i> Delivery &amp; pickup</span></div></div>
 <section class="section intro" id="story"><div class="container intro-grid"><div class="reveal"><div class="eyebrow">The Foodlynk feeling</div><h2 class="serif">Come for the <em>craving.</em><br/>Stay for the plate.</h2><p class="lead">Norma’s Foodlynk brings together generous Ghanaian favourites and crowd-pleasers for lunch, dinner cravings, quick bites and “let’s add one more” moments.</p><p class="lead" style="margin-top:15px">From tilapia and banku to loaded fries, jollof, shawarma, chicken, guinea fowl and fresh drinks — the menu is built for flavour and convenience.</p><a class="btn btn-dark" href="#menu" style="margin-top:23px">See what’s cooking →</a></div><div class="photo-stack reveal"><div class="photo-main"><img alt="Colourful meal from Norma’s Foodlynk" loading="lazy" src="assets/img/food-12.webp"/></div><div class="photo-small"><img alt="Loaded meal from Norma’s Foodlynk" loading="lazy" src="assets/img/food-06.webp"/></div><div class="ingredient-orb">made for<br/>the craving</div></div></div></section>
 <section class="section experience"><div class="container"><div class="experience-head reveal"><div><div class="eyebrow" style="color:var(--lime)">A little taste of Norma’s</div><h2 class="serif">Built to make<br/>you <em>hungry.</em></h2></div></div></div><div class="dish-track" id="dishTrack"></div></section>
