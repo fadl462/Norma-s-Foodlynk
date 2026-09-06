@@ -1995,3 +1995,20 @@ window.addEventListener('resize',()=>{if(window.innerWidth>820){nav.classList.re
   .smart-craving{width:100%!important;max-width:none!important}
 }
 </style>
+<style id="v67-nav-pill-final">
+/* V67 — restore the full rounded pill silhouette on the main navigation bar. */
+.nav,
+.nav.scrolled{
+  border-radius:9999px!important;
+  overflow:hidden!important;
+  clip-path:inset(0 round 9999px)!important;
+  isolation:isolate!important;
+}
+.nav::before{
+  border-radius:inherit!important;
+}
+@media(max-width:900px){
+  .nav.open{overflow:visible!important;clip-path:none!important}
+  .nav.open .navlinks{overflow:hidden!important}
+}
+</style>
