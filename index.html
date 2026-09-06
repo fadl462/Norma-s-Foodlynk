@@ -3096,6 +3096,35 @@ button,a,input{touch-action:manipulation}
 }
 </style>
 
+
+<style id="v92-mobile-chef-position">
+/* V92 — phone chef positioning: move the portrait inward and slightly lower for a balanced mobile composition. */
+@media (max-width:600px){
+  .hero-chef{
+    right:6vw!important;
+    bottom:-7px!important;
+    width:min(68vw,340px)!important;
+    opacity:.94!important;
+    transform:rotate(.2deg) translateZ(0)!important;
+  }
+  .hero-chef-glow{
+    right:-2vw!important;
+    bottom:-10vw!important;
+    width:72vw!important;
+    height:72vw!important;
+  }
+}
+@media (max-width:380px){
+  .hero-chef{
+    right:4vw!important;
+    bottom:-6px!important;
+    width:min(68vw,300px)!important;
+  }
+}
+@media (max-width:600px) and (orientation:landscape){
+  .hero-chef{right:4vw!important;bottom:-5px!important;width:min(43vw,250px)!important}
+}
+</style>
 </head>
 <body>
 <div class="noise"></div><div class="cursor" id="cursor"></div>
