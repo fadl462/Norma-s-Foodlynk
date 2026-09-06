@@ -638,9 +638,10 @@ button,a,input{touch-action:manipulation}
 <style id="v28-utility-topbar">
 /* V28 — move hero utility details into a dedicated top information bar */
 .hero-utility{position:fixed;top:0;left:0;width:100%;height:35px;z-index:95;background:rgba(10,10,9,.86);border-bottom:1px solid rgba(255,255,255,.10);backdrop-filter:blur(18px) saturate(1.08);-webkit-backdrop-filter:blur(18px) saturate(1.08);color:#fff}
-.hero-utility-inner{width:min(1180px,calc(100% - 32px));height:100%;margin:auto;display:grid;grid-template-columns:1fr 1fr 1.35fr;align-items:center}
+.hero-utility-inner{width:min(1180px,calc(100% - 32px));height:100%;margin:auto;display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center}
 .utility-item{height:18px;display:flex;align-items:center;justify-content:center;gap:9px;padding:0 18px;border-right:1px solid rgba(255,255,255,.10);min-width:0}
 .utility-item:first-child{justify-content:flex-start;padding-left:2px}
+.utility-item:nth-child(2){justify-content:center;justify-self:center;min-width:max-content}
 .utility-item:last-child{justify-content:flex-end;padding-right:2px;border-right:0}
 .utility-item small{font-size:8px;line-height:1;text-transform:uppercase;letter-spacing:.17em;color:rgba(255,255,255,.43);font-weight:900;white-space:nowrap}
 .utility-item span,.utility-item a{font-size:10px;line-height:1;color:rgba(255,255,255,.86);font-weight:800;white-space:nowrap;text-decoration:none}
@@ -656,7 +657,7 @@ button,a,input{touch-action:manipulation}
 }
 @media(max-width:900px){
   .hero-utility{height:34px}
-  .hero-utility-inner{width:calc(100% - 24px);grid-template-columns:1fr 1fr 1.3fr}
+  .hero-utility-inner{width:calc(100% - 24px)}
   .utility-item{padding-inline:8px;gap:5px}
   .utility-item:first-child{padding-left:0}
   .utility-item:last-child{padding-right:0}
@@ -668,7 +669,7 @@ button,a,input{touch-action:manipulation}
 }
 @media(max-width:600px){
   .hero-utility{height:32px}
-  .hero-utility-inner{width:calc(100% - 20px);grid-template-columns:.95fr .95fr 1.25fr}
+  .hero-utility-inner{width:calc(100% - 20px)}
   .utility-item{height:16px;padding-inline:6px;gap:4px}
   .utility-item small{font-size:6px;letter-spacing:.10em}
   .utility-item span,.utility-item a{font-size:7.5px;letter-spacing:-.01em}
@@ -3237,6 +3238,7 @@ window.addEventListener('resize',()=>{if(window.innerWidth>820){nav.classList.re
 
 
 
+<!-- V90 — center utility bar kitchen-hours item on the true content/viewport center. -->
 </body></html>
 
 
