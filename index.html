@@ -2434,6 +2434,44 @@ button,a,input{touch-action:manipulation}
   text-shadow:none!important;
 }
 </style>
+
+<style id="v78-mobile-hero-declutter">
+/* V78 — simplify the phone hero without changing the desktop composition. */
+@media (max-width: 900px){
+  /* Keep one useful utility item on phones; make it genuinely readable. */
+  .hero-utility{height:36px!important;min-height:36px!important;}
+  .hero-utility-inner{display:block!important;width:100%!important;}
+  .hero-utility .utility-item{display:none!important;}
+  .hero-utility .utility-item:first-child{
+    display:flex!important;
+    width:100%!important;
+    height:36px!important;
+    justify-content:center!important;
+    padding:0!important;
+    gap:9px!important;
+    border:0!important;
+  }
+  .hero-utility .utility-item:first-child small{
+    font-size:8.5px!important;
+    letter-spacing:.16em!important;
+    color:rgba(255,255,255,.62)!important;
+  }
+  .hero-utility .utility-item:first-child a{
+    font-size:12px!important;
+    letter-spacing:.01em!important;
+    color:#fff!important;
+    font-weight:900!important;
+  }
+
+  /* The phone hero should breathe: remove the secondary CTA row and scroll cue. */
+  .hero-actions{display:none!important;}
+  .hero-bottom{display:none!important;}
+
+  /* Give the craving guide a little more breathing room after the removed controls. */
+  .hero-content{padding-bottom:48px!important;}
+}
+</style>
+
 </head>
 <body>
 <div class="noise"></div><div class="cursor" id="cursor"></div>
