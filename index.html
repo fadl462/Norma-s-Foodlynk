@@ -2612,6 +2612,49 @@ button,a,input{touch-action:manipulation}
 }
 </style>
 
+
+<style id="v81-mobile-menu-half-width">
+/* V81 — refined mobile drawer:
+   exactly half-width, flush to the right edge, with no trailing icons. */
+@media (max-width:600px){
+  .nav.open > .navlinks{
+    right:0!important;
+    left:auto!important;
+    width:50vw!important;
+    max-width:50vw!important;
+    min-width:0!important;
+    border-right:0!important;
+    border-radius:28px 0 0 28px!important;
+  }
+
+  /* Clean, editorial menu rows — no tiny trailing arrows/icons. */
+  .nav.open > .navlinks a::after{
+    content:none!important;
+    display:none!important;
+  }
+
+  .nav.open > .navlinks a{
+    justify-content:flex-start!important;
+    padding-left:12px!important;
+    padding-right:10px!important;
+  }
+}
+
+@media (max-width:380px){
+  .nav.open > .navlinks{
+    width:50vw!important;
+    max-width:50vw!important;
+    padding-left:12px!important;
+    padding-right:10px!important;
+  }
+
+  .nav.open > .navlinks a{
+    font-size:15.5px!important;
+    padding-left:10px!important;
+  }
+}
+</style>
+
 </head>
 <body>
 <div class="noise"></div><div class="cursor" id="cursor"></div>
